@@ -1,0 +1,46 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.610 --> 00:00:05.520
+Hello, and welcome back to Angular 2 essential
+training.
+
+00:00:05.520 --> 00:00:08.490
+In this section we’ll be discussing routing.
+
+00:00:08.490 --> 00:00:12.940
+Routing is what happens when we move from
+one page on our site to another.
+
+00:00:12.940 --> 00:00:18.580
+This could be triggered by button clicks,
+clicks on a navigation menu, or code redirections.
+
+00:00:18.580 --> 00:00:24.940
+We’ll start this section off by going through
+how to build a simple routing implementation
+
+00:00:24.940 --> 00:00:29.490
+sending the user to our main page using the
+router-outlet.
+
+00:00:29.490 --> 00:00:34.860
+Then we’ll see how to use the routerLink
+to send users to a new page whenever they
+
+00:00:34.860 --> 00:00:38.860
+click on links such as a navigation menu or
+buttons.
+
+00:00:38.860 --> 00:00:44.440
+Finally, we’ll see how to pass parameters
+to our routes so that we can navigate to an
+
+00:00:44.440 --> 00:00:45.930
+individual book.
+
+00:00:45.930 --> 00:00:52.820
+While doing so, we’ll build out a new books-details
+component to render specific book details.
+

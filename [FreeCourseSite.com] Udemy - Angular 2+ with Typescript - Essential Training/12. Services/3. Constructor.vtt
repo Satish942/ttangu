@@ -1,0 +1,91 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.230 --> 00:00:06.900
+In the last video we looked at how services
+are used to inject data into components.
+
+00:00:06.900 --> 00:00:11.360
+Inside our component class there is a method
+named constructor which is where we need to
+
+00:00:11.360 --> 00:00:13.540
+inject our service.
+
+00:00:13.540 --> 00:00:18.759
+The constructor is a special method that is
+executed when a new instance of the class
+
+00:00:18.759 --> 00:00:20.330
+is being created.
+
+00:00:20.330 --> 00:00:25.720
+Even if we don’t explicitly define a constructor
+within a class, there is still a constructor
+
+00:00:25.720 --> 00:00:28.259
+that’s made, it’s just not seen.
+
+00:00:28.259 --> 00:00:33.030
+We use constructors to perform any initial
+setup for new objects.
+
+00:00:33.030 --> 00:00:38.239
+They can optionally take parameters but they
+can’t return any values.
+
+00:00:38.239 --> 00:00:46.800
+Lets work through a few quick examples to
+get better aquainted with the constructor.
+
+00:00:46.800 --> 00:00:51.129
+We always put the constructor directly below
+any pre-defined properties.
+
+00:00:51.129 --> 00:00:57.359
+Your going to see the constructor used a couple
+of different ways in online examples.
+
+00:00:57.359 --> 00:01:01.910
+The first and more common way, is you’ll
+see the constructor used to assign a private
+
+00:01:01.910 --> 00:01:06.070
+variable to some dependency injected service
+and routing.
+
+00:01:06.070 --> 00:01:11.770
+It will look like this, we set a private variable
+that contains an underscore to the service
+
+00:01:11.770 --> 00:01:22.220
+or routing instance we imported.
+
+00:01:22.220 --> 00:01:29.240
+The other, less common way of using the constructor
+is to initialize default property values.
+
+00:01:29.240 --> 00:01:36.070
+So you might see booksInStock set as a public
+variable with a type of number.
+
+00:01:36.070 --> 00:01:41.130
+Then inside the constructor’s curly brackets,
+the value is defined.
+
+00:01:41.130 --> 00:01:45.500
+Notice how we’re not returning anything
+but only assigning values.
+
+00:01:45.500 --> 00:01:51.000
+This is equivalent syntax, but to me it makes
+more sense to define booksInStock once if
+
+00:01:51.000 --> 00:01:54.170
+you already have a default value in mind.
+
+00:01:54.170 --> 00:01:59.320
+Lets now work through an example of a Service
+in our app by building a new BookService.
+

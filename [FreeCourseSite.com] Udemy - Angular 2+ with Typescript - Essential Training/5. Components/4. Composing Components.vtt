@@ -1,0 +1,132 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.170 --> 00:00:07.029
+Now that we’ve explored why building components
+is a good idea, lets go a little bit deeper
+
+00:00:07.029 --> 00:00:14.940
+to understand exactly what comprises a component
+and how we should be structuring our components.
+
+00:00:14.940 --> 00:00:20.600
+Components are always comprised of a Template,
+a Class and some Metadata.
+
+00:00:20.600 --> 00:00:23.160
+The template is the view layout.
+
+00:00:23.160 --> 00:00:29.750
+It is created with HTML and includes all of
+the binding, directives as well additional
+
+00:00:29.750 --> 00:00:33.140
+syntax that’s expressed within the view.
+
+00:00:33.140 --> 00:00:36.879
+Our class is the code that supports the view.
+
+00:00:36.879 --> 00:00:43.129
+It is created using typescript and includes
+properties and methods.
+
+00:00:43.129 --> 00:00:49.149
+Properties are used to define data elements
+and methods are function expressions used
+
+00:00:49.149 --> 00:00:52.079
+to define some logic.
+
+00:00:52.079 --> 00:00:57.809
+Metadata is the extra data used for our class
+inside of a decorator.
+
+00:00:57.809 --> 00:01:04.799
+This metadata tells Angular how to instantiate
+the component, construct a view and how to
+
+00:01:04.799 --> 00:01:08.960
+interact with other components using directives.
+
+00:01:08.960 --> 00:01:16.299
+In Angular, a class becomes a Component when
+it is given this metadata.
+
+00:01:16.299 --> 00:01:22.530
+Here is our AppComponent that we created as
+the root component to our application.
+
+00:01:22.530 --> 00:01:28.700
+Recall that the first thing we did was to
+declare a class and export it for use in other
+
+00:01:28.700 --> 00:01:30.250
+modules.
+
+00:01:30.250 --> 00:01:36.799
+We use Pascal casing as our naming convention
+– this means that we capitalize both words
+
+00:01:36.799 --> 00:01:42.939
+App which is our feature as well as Component
+which is our type.
+
+00:01:42.939 --> 00:01:49.840
+When defining our class composition we always
+put properties at the top and use camel casing
+
+00:01:49.840 --> 00:01:56.270
+syntax, so this means that we have the first
+word lower case and second word, if there
+
+00:01:56.270 --> 00:01:59.500
+is one, as uppercase.
+
+00:01:59.500 --> 00:02:05.979
+Methods are placed below properties and also
+follow the convention of camel casing.
+
+00:02:05.979 --> 00:02:08.050
+We then declared our Decorator.
+
+00:02:08.050 --> 00:02:16.850
+Decorator’s are a built-in feature of Typescript
+and are always prefixed with an @ symbol.
+
+00:02:16.850 --> 00:02:23.680
+Angular uses this feature to create custom
+decorators in order to add additional metadata
+
+00:02:23.680 --> 00:02:25.900
+about the class.
+
+00:02:25.900 --> 00:02:30.890
+When creating our decorators we’re actually
+just creating functions, and you can tell
+
+00:02:30.890 --> 00:02:34.849
+this is a function because it contains parenthesis.
+
+00:02:34.849 --> 00:02:37.900
+Then inside the function we declare an object.
+
+00:02:37.900 --> 00:02:43.040
+This object has a number optional properties
+depending upon our decorator.
+
+00:02:43.040 --> 00:02:50.130
+A few that we’ve already used are: selector,
+which defines the component directives name.
+
+00:02:50.130 --> 00:02:54.890
+As well as template which defines the component’s
+view.
+
+00:02:54.890 --> 00:03:00.370
+We then made to sure import our Component
+features from angular core so we’re able
+
+00:03:00.370 --> 00:03:02.550
+to create our decorator below.
+

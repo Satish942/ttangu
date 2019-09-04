@@ -1,0 +1,499 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.120 --> 00:00:04.759
+Now that we’ve finished implementing our
+single book routing, lets work through how
+
+00:00:04.759 --> 00:00:08.280
+to display this content in our book details
+component.
+
+00:00:08.280 --> 00:00:14.360
+The first thing I’ll do is open up our book.ts
+file, and this has the interface for our book.
+
+00:00:14.360 --> 00:00:20.080
+So just make sure that the interface includes
+this data right here.
+
+00:00:20.080 --> 00:00:25.360
+With our interface properly defined, lets
+open up our book.service.ts file.
+
+00:00:25.360 --> 00:00:30.320
+What I want to do in this file is first create
+a service that’s going to get the individual
+
+00:00:30.320 --> 00:00:33.170
+book.
+
+00:00:33.170 --> 00:00:38.250
+So I’ll scroll down a bit here and make
+a new method which is going to be called getBook.
+
+00:00:38.250 --> 00:00:39.550
+And this is going to take a parameter.
+
+00:00:39.550 --> 00:00:43.719
+We’ll call it id, which is of type string.
+
+00:00:43.719 --> 00:00:50.300
+This id represents the route parameter that
+we get when navigating to our route.
+
+00:00:50.300 --> 00:00:58.219
+It’s going to return an observable and that
+observable is going to be of type IBook.
+
+00:00:58.219 --> 00:01:03.969
+So what we’re going to do is first get all
+of the books and then filter for the book
+
+00:01:03.969 --> 00:01:05.380
+that we’re looking for.
+
+00:01:05.380 --> 00:01:12.590
+We’ll say return this.getBooks and this
+is going to give back all of the books.
+
+00:01:12.590 --> 00:01:16.030
+Which is using this method right here.
+
+00:01:16.030 --> 00:01:18.830
+And then we’ll say dot map.
+
+00:01:18.830 --> 00:01:25.600
+Inside this map contains the object of all
+of our books, so its going to be of type IBook
+
+00:01:25.600 --> 00:01:30.390
+and since it includes more then 1, its going
+to be an array.
+
+00:01:30.390 --> 00:01:33.990
+And then we’re going to use this return
+value of books.
+
+00:01:33.990 --> 00:01:37.230
+And then we’ll say dot find.
+
+00:01:37.230 --> 00:01:40.670
+Find is a method in the rxJS observables.
+
+00:01:40.670 --> 00:01:48.350
+If you hover over and then scroll down a little
+bit, you can see this operator find.d.ts.
+
+00:01:48.350 --> 00:01:52.710
+So this is the method that we’re using and
+you can actually open this up if you want
+
+00:01:52.710 --> 00:01:55.350
+and you can dig into this a little bit more.
+
+00:01:55.350 --> 00:01:58.600
+But all its going to do is compare 2 values.
+
+00:01:58.600 --> 00:02:04.270
+Inside of this find method, the first value
+represents our entire object that we’re
+
+00:02:04.270 --> 00:02:06.120
+getting back.
+
+00:02:06.120 --> 00:02:10.580
+And we can use a function here to say the
+object that we got back, we’re going to
+
+00:02:10.580 --> 00:02:16.610
+look for the id and we’re going to look
+for the one that’s equal to the id that
+
+00:02:16.610 --> 00:02:18.329
+we passed in right here.
+
+00:02:18.329 --> 00:02:24.640
+What we’ll do is take the route parameter
+which is the id of the book and then we’re
+
+00:02:24.640 --> 00:02:31.730
+going to match it against all of the books
+that we find to extract the one that we want.
+
+00:02:31.730 --> 00:02:38.659
+Then below this I’m going to chain a dot
+do method so I can print out the data.
+
+00:02:38.659 --> 00:02:44.129
+This is just going to be a log statement that
+will print out for us the data we just searched
+
+00:02:44.129 --> 00:02:45.129
+for.
+
+00:02:45.129 --> 00:02:47.209
+Which should be just the one single book.
+
+00:02:47.209 --> 00:02:52.299
+And then I’ll comment out this console log
+up here.
+
+00:02:52.299 --> 00:02:56.859
+Now the next thing to do is in our book details
+component, so we’ll open up our typescript
+
+00:02:56.859 --> 00:02:58.689
+file.
+
+00:02:58.689 --> 00:03:07.279
+Within our import statement I need to import
+OnInit and OnDestroy.
+
+00:03:07.279 --> 00:03:13.709
+Then below that I’m going to also import
+ActivatedRoute, and this is going to be from
+
+00:03:13.709 --> 00:03:18.510
+@angular/router.
+
+00:03:18.510 --> 00:03:23.840
+We need activatedRoute so we can grab the
+parameter that’s been passed in to the route
+
+00:03:23.840 --> 00:03:26.050
+location.
+
+00:03:26.050 --> 00:03:32.829
+Then I’m going to implement our OnInit and
+OnDestroy right here, so implements OnInit
+
+00:03:32.829 --> 00:03:34.739
+and OnDestroy.
+
+00:03:34.739 --> 00:03:38.480
+I’m going to create a few properties up
+top.
+
+00:03:38.480 --> 00:03:49.669
+So the first one is going to be book which
+is of type IBook, and we’ll say errorMessage
+
+00:03:49.669 --> 00:03:51.939
+is of type string.
+
+00:03:51.939 --> 00:03:59.650
+Now lets go back up here and we need to import
+IBook, so we’ll say import and then IBook
+
+00:03:59.650 --> 00:04:04.430
+from ../book.
+
+00:04:04.430 --> 00:04:11.299
+And lets go ahead also and import our service,
+so we’ll import BookService and this will
+
+00:04:11.299 --> 00:04:16.290
+be from ../book.service.
+
+00:04:16.290 --> 00:04:20.340
+Lets go ahead and also import subscription.
+
+00:04:20.340 --> 00:04:30.560
+So this will be import Subscription and this
+is going to be from rxjs/Subscription.
+
+00:04:30.560 --> 00:04:35.780
+Subscription allows us to subscribe to an
+observable and the observable that we’re
+
+00:04:35.780 --> 00:04:42.380
+going to subscribe to is the ActivatedRoute
+params, and you’ll see how its done in a
+
+00:04:42.380 --> 00:04:43.380
+second.
+
+00:04:43.380 --> 00:04:49.180
+What we’ll do is make a private variale
+for our subscription.
+
+00:04:49.180 --> 00:04:54.370
+Now lets create our constructor and inside
+the constructor we’ll first make a private
+
+00:04:54.370 --> 00:04:55.590
+route.
+
+00:04:55.590 --> 00:05:01.590
+So this is private underscore route assigned
+to ActivatedRoute.
+
+00:05:01.590 --> 00:05:06.820
+And we’ll also make another private variable
+this is going to be for our bookService so
+
+00:05:06.820 --> 00:05:12.030
+we’ll say underscore bookService is of type
+BookService.
+
+00:05:12.030 --> 00:05:17.210
+Then inside of the constructor I’m going
+to do one thing, which is to add a log statement.
+
+00:05:17.210 --> 00:05:21.610
+What we’re going to do is pull out the id
+of our route params.
+
+00:05:21.610 --> 00:05:31.470
+So I can say this._route, which we just defined
+above, dot snapshot dot params of id.
+
+00:05:31.470 --> 00:05:37.340
+So when we navigate to this page, I’m going
+to log out the id that was passed into our
+
+00:05:37.340 --> 00:05:39.970
+route parameters.
+
+00:05:39.970 --> 00:05:44.970
+Below this lets go ahead and declare our getBook
+method within our component.
+
+00:05:44.970 --> 00:05:50.240
+So this will be getBook and we’re passing
+in the id which is of type string.
+
+00:05:50.240 --> 00:05:58.289
+Then we’ll say this dot underscore bookService
+dot getBook, which is going to call the getBook
+
+00:05:58.289 --> 00:06:00.050
+method on our BookService.
+
+00:06:00.050 --> 00:06:06.500
+We’ll pass in the id, then subscribe to
+the observable that we get back.
+
+00:06:06.500 --> 00:06:11.509
+This is going to return for us an object with
+just a single book, so that’s what this
+
+00:06:11.509 --> 00:06:12.509
+book is.
+
+00:06:12.509 --> 00:06:19.569
+And then we’ll use a function to say this
+dot book, which we defined right here is equal
+
+00:06:19.569 --> 00:06:22.349
+to the results that we just got back.
+
+00:06:22.349 --> 00:06:29.560
+Then in case there’s an error, we’ll say
+error function this dot errorMessage is equal
+
+00:06:29.560 --> 00:06:33.199
+to an error of type any.
+
+00:06:33.199 --> 00:06:37.030
+You might be thinking, where is this id coming
+from?
+
+00:06:37.030 --> 00:06:42.540
+Because we haven’t defined an id anywhere
+within the html and we haven’t declared
+
+00:06:42.540 --> 00:06:44.400
+this id up above.
+
+00:06:44.400 --> 00:06:50.229
+So this id is going to be passed in when we
+navigate to the route and that’s why we
+
+00:06:50.229 --> 00:06:53.320
+have to use this ActivatedRoute.
+
+00:06:53.320 --> 00:06:55.009
+And we can do that using NgOnInit.
+
+00:06:55.009 --> 00:07:02.599
+So we’ll say ngOnInit and we’ll just say
+type void because it doesn’t return anything.
+
+00:07:02.599 --> 00:07:11.490
+We’ll say this dot sub and what this will
+do is watch for an observable coming through
+
+00:07:11.490 --> 00:07:12.580
+the route.
+
+00:07:12.580 --> 00:07:21.150
+So we’ll say this dot underscore route,
+which we defined up above dot params dot subscribe.
+
+00:07:21.150 --> 00:07:30.300
+We subscribe to the route params observable
+which returns for us the params object.
+
+00:07:30.300 --> 00:07:35.319
+This is just a variable containing what is
+returned from the observable.
+
+00:07:35.319 --> 00:07:43.330
+And within these curly’s I need to define
+our id and that’s going to be params of
+
+00:07:43.330 --> 00:07:44.680
+id.
+
+00:07:44.680 --> 00:07:49.099
+So this is just like up above where we’re
+taking a snashot of the params and we still
+
+00:07:49.099 --> 00:07:52.599
+have to grab this id field.
+
+00:07:52.599 --> 00:07:58.230
+And then I can use this id variable that we
+just defined inside of getBook in order to
+
+00:07:58.230 --> 00:08:03.600
+make a call to our service.
+
+00:08:03.600 --> 00:08:06.750
+Now lets open up our book details component.
+
+00:08:06.750 --> 00:08:14.139
+So now that we’ve got back the individual
+book, if I change this war and peace to book.name
+
+00:08:14.139 --> 00:08:19.819
+I should expect to get back the name of the
+book that we’ve navigated to.
+
+00:08:19.819 --> 00:08:23.090
+So lets go over to our application and test
+this out.
+
+00:08:23.090 --> 00:08:31.030
+I’ll just refresh this and go over to all
+books and I’m going to open up my console
+
+00:08:31.030 --> 00:08:33.820
+and navigate over to the hobbit.
+
+00:08:33.820 --> 00:08:36.390
+So basically you can see this breaks.
+
+00:08:36.390 --> 00:08:41.490
+We don’t get back the name of the book and
+if we scroll up here, we see ‘cannot read
+
+00:08:41.490 --> 00:08:43.160
+name of undefined’.
+
+00:08:43.160 --> 00:08:46.190
+There’s a couple of logs that went through.
+
+00:08:46.190 --> 00:08:51.740
+The first one shows that we did get the snapshot
+of the route.
+
+00:08:51.740 --> 00:08:57.910
+Even though its not appearing up here because
+this broke, we did get back the route snapshot.
+
+00:08:57.910 --> 00:09:04.990
+We got back our route snapshot, and then our
+app broke and if we scroll down here we did
+
+00:09:04.990 --> 00:09:10.370
+get back the object.
+
+00:09:10.370 --> 00:09:15.050
+The reason why this breaks is because the
+template gets updated before the model gets
+
+00:09:15.050 --> 00:09:16.519
+updated.
+
+00:09:16.519 --> 00:09:22.580
+So essentially, the template has loaded before
+we’ve gotten back our object.
+
+00:09:22.580 --> 00:09:24.250
+Lets switch back over to our code.
+
+00:09:24.250 --> 00:09:30.470
+There’s a newer way to fix this which involves
+using a resolve object on the router to make
+
+00:09:30.470 --> 00:09:34.840
+sure we’ve got the data back before the
+template is displayed.
+
+00:09:34.840 --> 00:09:40.680
+But for the time being I’m going to use
+the older solution which is just to add an
+
+00:09:40.680 --> 00:09:46.600
+elvis operator which is a question mark saying
+that don’t display this until our object
+
+00:09:46.600 --> 00:09:48.430
+has been obtained.
+
+00:09:48.430 --> 00:09:55.430
+Now, if I save this and I go back to my app
+and go to the hobbit, we can see that the
+
+00:09:55.430 --> 00:09:59.450
+name is displayed right here.
+
+00:09:59.450 --> 00:10:06.260
+Now lets open up my api books and then books.json.
+
+00:10:06.260 --> 00:10:12.250
+So now all you need to do to fix this template
+is just add the correct binding down below.
+
+00:10:12.250 --> 00:10:20.260
+If I were to copy this over and go down here
+which it says description I will paste that
+
+00:10:20.260 --> 00:10:25.070
+and in our json file you see that we’re
+using the key description, so I can just change
+
+00:10:25.070 --> 00:10:29.370
+that real easy and now that’s going to replace
+the description.
+
+00:10:29.370 --> 00:10:34.860
+So you can do the same for the specifications
+and the release date.
+
+00:10:34.860 --> 00:10:40.550
+And one thing that I will mention is that
+within this class panel collapse collapse
+
+00:10:40.550 --> 00:10:46.070
+you have to add the keyword ‘in’ in order
+to make this un-collapsed.
+
+00:10:46.070 --> 00:10:48.240
+And you need to do this for the other ones
+as well.
+
+00:10:48.240 --> 00:10:50.450
+We’ll change this to in as well.
+
+00:10:50.450 --> 00:10:54.630
+And this will make the wells already collapsed.
+
+00:10:54.630 --> 00:11:00.129
+If you have any problems fixing this the code
+solutions will be available within this lecture.
+

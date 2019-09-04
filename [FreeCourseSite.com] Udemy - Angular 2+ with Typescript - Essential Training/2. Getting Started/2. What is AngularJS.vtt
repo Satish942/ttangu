@@ -1,0 +1,137 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.390 --> 00:00:04.690
+So what exactly is Angular?
+
+00:00:04.690 --> 00:00:13.060
+AngularJS is a leading framework for building
+javascript heavy single page based web applications.
+
+00:00:13.060 --> 00:00:19.960
+Single page apps or SPA’s load the entire
+content of a site within a single page.
+
+00:00:19.960 --> 00:00:25.070
+This single page is usually an index.html
+file.
+
+00:00:25.070 --> 00:00:30.929
+This means that once the main page is loaded,
+clicking on links will not reload the entire
+
+00:00:30.929 --> 00:00:36.449
+page but simply update sections within the
+page itself.
+
+00:00:36.449 --> 00:00:45.079
+USAToday.com is a great example of this technology
+being used in modern websites.
+
+00:00:45.079 --> 00:00:51.090
+The popularity of SPA-based web apps has taken
+off based on the fact that they allow us to
+
+00:00:51.090 --> 00:01:00.180
+deliver rich, dynamic and fast loading content
+that mimics that of a desktop applications.
+
+00:01:00.180 --> 00:01:06.290
+One big difference between Angular based sites
+and traditional ones is that Angular expects
+
+00:01:06.290 --> 00:01:09.240
+the browser to build the page.
+
+00:01:09.240 --> 00:01:15.850
+In this diagram, the server sends to the browser
+all the data to build a page – which includes
+
+00:01:15.850 --> 00:01:23.030
+the HTML, CSS and Javascript files, and then
+browser then does the work of building the
+
+00:01:23.030 --> 00:01:26.439
+final template that’s displayed in a web
+page.
+
+00:01:26.439 --> 00:01:33.259
+Now this may seem like a lot of work for the
+browser but it actually results in much faster
+
+00:01:33.259 --> 00:01:35.909
+load times.
+
+00:01:35.909 --> 00:01:42.229
+When compared to more traditional applications
+that use PHP or Java, the server is responsible
+
+00:01:42.229 --> 00:01:44.619
+for all the heavy lifting.
+
+00:01:44.619 --> 00:01:51.020
+This includes accepting requests, fetching
+the data, along with building the final page.
+
+00:01:51.020 --> 00:01:57.100
+Relying exclusively on the server in this
+way may result in higher usage fees along
+
+00:01:57.100 --> 00:02:03.060
+with slower load times when sites see a heavy
+increase in traffic.
+
+00:02:03.060 --> 00:02:09.000
+In addition to the increases in speed and
+performance, Angular allows us to write much
+
+00:02:09.000 --> 00:02:12.670
+more succinct code then using plain javascript.
+
+00:02:12.670 --> 00:02:19.860
+We’re able to add if conditions, loops and
+local variables directly within our templates.
+
+00:02:19.860 --> 00:02:30.190
+We’re also able to track, process and display
+changes from the user using the magic of data-binding.
+
+00:02:30.190 --> 00:02:34.090
+Angular was developed with 3 key concepts
+in mind.
+
+00:02:34.090 --> 00:02:40.060
+Make it modular, make it testable and make
+it maintainable.
+
+00:02:40.060 --> 00:02:47.580
+Angular 1 gave us modules to effectively separate
+out our code for testing and maintenance.
+
+00:02:47.580 --> 00:02:54.690
+Angular 2 brings us components an even better
+way of seperating out our logic
+
+00:02:54.690 --> 00:03:01.409
+Angular version 1 was first published in 2009
+and became a massive success with millions
+
+00:03:01.409 --> 00:03:06.620
+of developers worldwide adopting and using
+the framework.
+
+00:03:06.620 --> 00:03:13.220
+Angular version 2 introduces sweeping changes
+along with a complete code rewrite.
+
+00:03:13.220 --> 00:03:19.629
+Which begs the question, why the need for
+such a huge shift with a framework so popular
+
+00:03:19.629 --> 00:03:21.379
+and universally loved?
+
+00:03:21.379 --> 00:03:24.620
+We’ll answer that question in the next lecture.
+

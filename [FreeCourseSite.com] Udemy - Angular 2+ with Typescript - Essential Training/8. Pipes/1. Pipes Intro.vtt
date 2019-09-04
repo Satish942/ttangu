@@ -1,0 +1,44 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.180 --> 00:00:04.990
+Hello and welcome back to Angular 2 essential
+training.
+
+00:00:04.990 --> 00:00:08.220
+In this section we’ll discuss pipes.
+
+00:00:08.220 --> 00:00:11.800
+Pipes allow us to transform or format our
+data.
+
+00:00:11.800 --> 00:00:17.940
+In this way we can take data given to us by
+an API or database and make it more appropriate
+
+00:00:17.940 --> 00:00:20.820
+for our needs inside of our application.
+
+00:00:20.820 --> 00:00:27.110
+Angular provides us with a number of built-in
+pipes that we can easily use within our HTML
+
+00:00:27.110 --> 00:00:28.280
+templates.
+
+00:00:28.280 --> 00:00:34.280
+We do so by adding in a pipe character and
+then the name of the built-in pipe.
+
+00:00:34.280 --> 00:00:40.480
+We can also create custom pipes to perform
+a specific kind of data transformation.
+
+00:00:40.480 --> 00:00:45.700
+When we use custom pipes in our app we use
+the pipe character followed by the name of
+
+00:00:45.700 --> 00:00:46.550
+our custom pipe.
+

@@ -1,0 +1,149 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.979 --> 00:00:05.190
+Lets break down what a service is and how
+it’s used.
+
+00:00:05.190 --> 00:00:11.660
+Services are used to encapsulate logic that
+can be re-used across multiple components.
+
+00:00:11.660 --> 00:00:16.830
+Services contain methods that does the work
+of getting or updating some data.
+
+00:00:16.830 --> 00:00:21.630
+That data could be coming from a JSON file
+located in one of our folders, an external
+
+00:00:21.630 --> 00:00:25.109
+API, or from our database.
+
+00:00:25.109 --> 00:00:29.130
+We need to have a way for our components to
+access these methods.
+
+00:00:29.130 --> 00:00:34.170
+Sure we could directly import them into components,
+but this is not ideal as it would make our
+
+00:00:34.170 --> 00:00:37.600
+components brittle and potentially incur side
+effects such as race conditions if multiple
+
+00:00:37.600 --> 00:00:38.600
+components are attempting to update some data
+at the same time.
+
+00:00:38.600 --> 00:00:42.449
+That’s why Angular allows us to register
+our service with a Injector.
+
+00:00:42.449 --> 00:00:48.890
+The injector then creates and manages a Single
+instance of the service known as a Singleton
+
+00:00:48.890 --> 00:00:55.550
+that can then be be injected into any number
+of components that needs access to the service
+
+00:00:55.550 --> 00:01:00.750
+without compromising the data or the state
+of our application.
+
+00:01:00.750 --> 00:01:05.340
+Lets look at the 3 steps to creating and using
+a service.
+
+00:01:05.340 --> 00:01:07.680
+The first step is to create a new file.
+
+00:01:07.680 --> 00:01:12.440
+The naming convention is to use the name of
+our service feature followed by the keyword
+
+00:01:12.440 --> 00:01:16.040
+service along with the typescript extension.
+
+00:01:16.040 --> 00:01:19.520
+Inside our file we need to import Injectable.
+
+00:01:19.520 --> 00:01:24.550
+Injectable is a decorator that is used to
+manage our service instance.
+
+00:01:24.550 --> 00:01:27.900
+And we’re also importing the IBook interface.
+
+00:01:27.900 --> 00:01:31.870
+We declare our Injectable decorator above
+the class.
+
+00:01:31.870 --> 00:01:38.400
+Remember, decorators add metadata or you could
+say added functionality to the class.
+
+00:01:38.400 --> 00:01:46.130
+By declaring Injectable in this way, it allows
+us to inject the BookService class as a Singleton
+
+00:01:46.130 --> 00:01:48.240
+into components.
+
+00:01:48.240 --> 00:01:53.140
+Then inside the class we’ll be defining
+some methods that will do the work of getting
+
+00:01:53.140 --> 00:01:54.750
+and updating books.
+
+00:01:54.750 --> 00:01:59.800
+Next, we need to declare our new service inside
+our NgModule.
+
+00:01:59.800 --> 00:02:03.480
+We do this inside a new key called providers.
+
+00:02:03.480 --> 00:02:09.689
+This is telling Angular that we want to provide
+a singleton instance of BookService whenever
+
+00:02:09.689 --> 00:02:12.069
+BookService is injected into a component.
+
+00:02:12.069 --> 00:02:14.020
+And then we’re able to import and use our
+BookService inside any of our components.
+
+00:02:14.020 --> 00:02:17.740
+Here we’re importing our Book interface
+along with the bookService.
+
+00:02:17.740 --> 00:02:21.799
+We need to add our BookService inside our
+constructor parameter.
+
+00:02:21.799 --> 00:02:25.200
+This will initialize the service for use below.
+
+00:02:25.200 --> 00:02:30.280
+Then we’re able to create methods inside
+the class that have access to the methods
+
+00:02:30.280 --> 00:02:34.079
+inside our service such as getBooks.
+
+00:02:34.079 --> 00:02:37.519
+This can be a lot to absorb if its your first
+time seeing this stuff.
+
+00:02:37.519 --> 00:02:41.760
+That’s why we’ll be going over this in
+more detail along with some examples.
+
+00:02:41.760 --> 00:02:47.989
+But lets start with a better explanation of
+what this Constructor method actually is.
+

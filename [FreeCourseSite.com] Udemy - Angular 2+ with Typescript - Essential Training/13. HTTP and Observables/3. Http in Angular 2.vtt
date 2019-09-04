@@ -1,0 +1,49 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.969 --> 00:00:06.049
+We use http in order to send requests for
+data.
+
+00:00:06.049 --> 00:00:10.700
+A few requests we can make are GET requests
+in order to fetch some data.
+
+00:00:10.700 --> 00:00:14.870
+And PUT requests that are used to add or alter
+some piece of data.
+
+00:00:14.870 --> 00:00:19.660
+Angular makes it very easy for us to work
+with these http requests.
+
+00:00:19.660 --> 00:00:28.230
+All we need to do is import Http from angular/http,
+then add the HttpModule inside our NgModule
+
+00:00:28.230 --> 00:00:31.579
+file and add it to our list of imports.
+
+00:00:31.579 --> 00:00:36.240
+We need to create an instance of Http so it
+can be used in our class.
+
+00:00:36.240 --> 00:00:41.750
+We do this inside the constructor by adding
+a private variable of http.
+
+00:00:41.750 --> 00:00:43.360
+Then we can start making requests.
+
+00:00:43.360 --> 00:00:50.290
+In this case it’s a get request made to
+a books.json file located in our api folder.
+
+00:00:50.290 --> 00:00:54.720
+Then we need to map our response before sending
+it to the component.
+
+00:00:54.720 --> 00:00:58.530
+Lets now add an Http GET request to our application.
+

@@ -1,0 +1,68 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.400 --> 00:00:07.529
+Angular 2 provides a variety of options when
+choosing a language to code in.
+
+00:00:07.529 --> 00:00:14.789
+We can use ES5 which is the current version
+of javascript, Dart, CoffeeScript, either
+
+00:00:14.789 --> 00:00:21.230
+of the newer versions of javascript known
+as ES2015 as well as a future version of javascript
+
+00:00:21.230 --> 00:00:26.890
+known as ES7 or Typescript, which really is
+the preferred language.
+
+00:00:26.890 --> 00:00:33.570
+No matter what language you choosing, everything
+gets transpiled or turned into browser readable
+
+00:00:33.570 --> 00:00:36.090
+ES5 Javascript.
+
+00:00:36.090 --> 00:00:40.930
+To see some examples of the different language
+options and how they’re used in angular
+
+00:00:40.930 --> 00:00:45.300
+2, lets navigate over to the angular.io.
+
+00:00:45.300 --> 00:00:50.250
+By clicking Get Started we are presented with
+the reference docs.
+
+00:00:50.250 --> 00:00:56.240
+On every page we see a clickable option for
+for displaying one of 3 different code selections.
+
+00:00:56.240 --> 00:01:01.940
+So we can choose Typescript, ES5 Javascript
+or Dart.
+
+00:01:01.940 --> 00:01:07.970
+Angular 2 is itself is written in typescript
+and most of the examples, courses and tutorials
+
+00:01:07.970 --> 00:01:12.070
+you’ll see on the web are also written in
+typescript.
+
+00:01:12.070 --> 00:01:17.620
+Google selected the use of typescript when
+writing Angular 2 because of the awesome language
+
+00:01:17.620 --> 00:01:20.970
+enhancements typescript provides.
+
+00:01:20.970 --> 00:01:26.690
+Lets now take a moment to introduce the typescript
+language and understand the benefits of using
+
+00:01:26.690 --> 00:01:27.350
+typescript.
+

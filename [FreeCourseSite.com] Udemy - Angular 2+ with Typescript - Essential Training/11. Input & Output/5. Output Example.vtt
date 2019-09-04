@@ -1,0 +1,209 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.819 --> 00:00:04.950
+Lets now go through our example in our actual
+application.
+
+00:00:04.950 --> 00:00:10.330
+I’ll start off by opening up our favorites
+component.
+
+00:00:10.330 --> 00:00:16.390
+And I’m going to import both of our Output
+as well as EventEmitter classes.
+
+00:00:16.390 --> 00:00:21.620
+Now I’m going to add our Output property
+right below our Input.
+
+00:00:21.620 --> 00:00:30.000
+So we’ll say @Output and lets name our property
+notify, which is of type EventEmitter.
+
+00:00:30.000 --> 00:00:38.760
+And our EventEmitter is going to be a string
+and then we set it equal to a new EventEmitter
+
+00:00:38.760 --> 00:00:42.420
+which is of type string, then we need to invoke
+it.
+
+00:00:42.420 --> 00:00:47.510
+Now the next thing is to create a method in
+this FavoriteComponent that’s going to do
+
+00:00:47.510 --> 00:00:49.710
+something with our notify event.
+
+00:00:49.710 --> 00:00:57.000
+So we’ll go down here and name our method
+onClick which is of type void since it doesn’t
+
+00:00:57.000 --> 00:00:58.000
+return anything.
+
+00:00:58.000 --> 00:01:01.870
+But it is going to send a message up to the
+parent.
+
+00:01:01.870 --> 00:01:10.560
+So we’ll say this.notify.emit is going to
+send the message ‘Message from chid’.
+
+00:01:10.560 --> 00:01:16.430
+Now lets go ahead and add a button in our
+favorite component html file in order to trigger
+
+00:01:16.430 --> 00:01:18.720
+this output method.
+
+00:01:18.720 --> 00:01:25.800
+Below hello world, we’ll add a new div container
+that’s going to contain a button, and we’ll
+
+00:01:25.800 --> 00:01:33.780
+add some bootstrap styling here that’s going
+to be btn-info, then add the text ‘Trigger
+
+00:01:33.780 --> 00:01:37.190
+notify’ inside of our button.
+
+00:01:37.190 --> 00:01:40.990
+Inside our div is where we’re going to add
+our onClick event handler.
+
+00:01:40.990 --> 00:01:46.270
+We’ll say, when this button is clicked we
+want to trigger the onClick method that we
+
+00:01:46.270 --> 00:01:48.880
+just defined in our component.
+
+00:01:48.880 --> 00:01:57.750
+With that set up, lets now add this notify
+property inside of our books list html file.
+
+00:01:57.750 --> 00:02:00.110
+Inside of our child selector.
+
+00:02:00.110 --> 00:02:05.300
+Right now we have our bs-favorite child selector
+already defined.
+
+00:02:05.300 --> 00:02:08.700
+We can add another one here, right now we
+have reviews equal book.bookReviews.
+
+00:02:08.700 --> 00:02:16.440
+So we’ll go ahead and add our notify event
+property and then set it equal to a method
+
+00:02:16.440 --> 00:02:22.360
+we’ll create in our component called onNotifyClicked.
+
+00:02:22.360 --> 00:02:28.740
+And its going to contain the event that’s
+being sent from the child component.
+
+00:02:28.740 --> 00:02:35.600
+So when a user clicks this button here in
+our child component its going to trigger this
+
+00:02:35.600 --> 00:02:41.560
+method and its going to send the event which
+is a string message.
+
+00:02:41.560 --> 00:02:47.530
+We want to display that message somewhere
+in our parent, and to do that we’ll add
+
+00:02:47.530 --> 00:02:51.800
+an h2 tag right below this container.
+
+00:02:51.800 --> 00:02:55.910
+And we’ll call this showMessage.
+
+00:02:55.910 --> 00:03:01.760
+So showMessage is going to display the message
+that was emitted from the child up to the
+
+00:03:01.760 --> 00:03:03.310
+parent.
+
+00:03:03.310 --> 00:03:05.600
+Now lets open up our books-list component.
+
+00:03:05.600 --> 00:03:08.140
+And I’m going to clean this up a bit.
+
+00:03:08.140 --> 00:03:11.910
+Lets remove OnChanges and OnInit.
+
+00:03:11.910 --> 00:03:13.880
+And then we’ll get rid of this implements.
+
+00:03:13.880 --> 00:03:20.200
+I’ll get rid of these 2 methods that we
+defined as well as the changeMethod and the
+
+00:03:20.200 --> 00:03:22.980
+animals property.
+
+00:03:22.980 --> 00:03:28.690
+First I’ll define a property for the showMessage
+and its going to be of type string.
+
+00:03:28.690 --> 00:03:34.010
+And its going to equal, we’ll just say ‘test’
+for now, and this is going to change when
+
+00:03:34.010 --> 00:03:37.730
+we get back the event from our child.
+
+00:03:37.730 --> 00:03:41.100
+Lets go down here and define our onNotify
+method.
+
+00:03:41.100 --> 00:03:43.000
+We’ll say onNotifyClicked.
+
+00:03:43.000 --> 00:03:49.950
+This is going to contain a parameter with
+the message we received back from the favorite
+
+00:03:49.950 --> 00:03:50.950
+component.
+
+00:03:50.950 --> 00:03:57.670
+Its going to be of type string, and this method
+is going to be of type void also.
+
+00:03:57.670 --> 00:04:06.180
+And then we’ll just set our showMessage
+property to be equal to the message we received.
+
+00:04:06.180 --> 00:04:11.870
+If we set up this up correctly, we should
+expect this trigger notify button event will
+
+00:04:11.870 --> 00:04:17.600
+be emitted from our component with the message
+‘Message from child’ delivered to its
+
+00:04:17.600 --> 00:04:23.120
+parent of books-list component and then its
+going to show in this showMessage property
+
+00:04:23.120 --> 00:04:26.160
+we defined in the html right here.
+
+00:04:26.160 --> 00:04:30.280
+So first we get our ‘test’ because that’s
+what we’re displaying in showMessage.
+
+00:04:30.280 --> 00:04:33.760
+Then if I hit this trigger notify, it gets
+changed to Message from child.
+

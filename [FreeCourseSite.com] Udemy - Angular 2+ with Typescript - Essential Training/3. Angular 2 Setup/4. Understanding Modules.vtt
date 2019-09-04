@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.500 --> 00:00:05.630
+Now that you’ve gone through the process
+of building an Angular starter app, lets take
+
+00:00:05.630 --> 00:00:09.630
+the next step and explore the concept of Modules.
+
+00:00:09.630 --> 00:00:14.940
+A module essentially acts to create containers
+around our files.
+
+00:00:14.940 --> 00:00:21.400
+So anytime we create any new file, we’re
+also creating an enclosed module for that
+
+00:00:21.400 --> 00:00:22.400
+file.
+
+00:00:22.400 --> 00:00:27.550
+By doing so, we don’t have to worry about
+variables polluting the global scope since
+
+00:00:27.550 --> 00:00:31.820
+every file acts as its own closed system.
+
+00:00:31.820 --> 00:00:37.140
+When building up our starter app, we created
+a system.js config file.
+
+00:00:37.140 --> 00:00:41.110
+The purpose of this file is to act as a module
+loader.
+
+00:00:41.110 --> 00:00:47.120
+So instead of adding all of our javascript
+files at the bottom our index file, we let
+
+00:00:47.120 --> 00:00:52.270
+systemJS do the work of loading up all the
+javascript files also known as modules we’ll
+
+00:00:52.270 --> 00:00:54.350
+need for our application.
+
+00:00:54.350 --> 00:01:01.260
+So modules are just the files that we create
+and use within our application.
+
+00:01:01.260 --> 00:01:08.150
+We use the keywords import and export when
+we want to use the contents our modules in
+
+00:01:08.150 --> 00:01:10.750
+other modules.
+
+00:01:10.750 --> 00:01:14.680
+Here is what our app.component.ts file looks
+like.
+
+00:01:14.680 --> 00:01:21.070
+In this file, we’re importing the Component
+class from the file angular core file.
+
+00:01:21.070 --> 00:01:26.450
+Notice how we’re using the import keyword
+followed by the name of the class we want
+
+00:01:26.450 --> 00:01:33.570
+to use inside of curly brackets followed by
+the keyword from and then the name of the
+
+00:01:33.570 --> 00:01:34.570
+file.
+
+00:01:34.570 --> 00:01:41.040
+We can omit the extension here since this
+is defined already in our system config file.
+
+00:01:41.040 --> 00:01:46.799
+Then below we use the export keyword followed
+by the name of a class.
+
+00:01:46.799 --> 00:01:52.070
+This allows us to use our app component file
+in other files.
+
+00:01:52.070 --> 00:01:57.930
+And if we open up our app.module file you
+can see that we are in fact importing the
+
+00:01:57.930 --> 00:01:59.710
+AppComponent right here.
+

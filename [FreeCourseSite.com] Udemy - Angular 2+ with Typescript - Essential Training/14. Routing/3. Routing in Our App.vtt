@@ -1,0 +1,108 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.650 --> 00:00:05.470
+Back in our app, the first thing I’ll do
+is if you haven’t already done so is fix
+
+00:00:05.470 --> 00:00:10.140
+this api link so it correctly grabs my books.json
+file.
+
+00:00:10.140 --> 00:00:15.230
+The next thing is I’m going to add my base
+href to the index file right below the opening
+
+00:00:15.230 --> 00:00:17.060
+head tag.
+
+00:00:17.060 --> 00:00:20.289
+With that done, we can get to work on adding
+routing.
+
+00:00:20.289 --> 00:00:27.170
+So lets open up the app.module file and we’ll
+start off by importing RouterModule from angular/router.
+
+00:00:27.170 --> 00:00:34.300
+Next, we’ll add in our RouterModule to our
+list of imports.
+
+00:00:34.300 --> 00:00:40.890
+Then we’ll say dot forRoot in order to declare
+an array of paths for our routes.
+
+00:00:40.890 --> 00:00:48.710
+The first route will be named books and is
+going to use our BooksListComponent.
+
+00:00:48.710 --> 00:00:54.600
+The next route is going to be an empty string,
+which says anytime a user navigates to the
+
+00:00:54.600 --> 00:01:00.010
+root index of our app, take them route named
+books.
+
+00:01:00.010 --> 00:01:07.470
+We also need to include a path match property
+with a value of full whenever using redirection.
+
+00:01:07.470 --> 00:01:13.030
+And our last route is going to be a wildcard,
+saying if a user navigates to a route that
+
+00:01:13.030 --> 00:01:18.970
+isn’t defined, then just redirect them back
+to our books route.
+
+00:01:18.970 --> 00:01:21.400
+Now we need to add our router outlet.
+
+00:01:21.400 --> 00:01:25.360
+Lets open up our app.component.html file.
+
+00:01:25.360 --> 00:01:29.600
+The html at the top here is for our menu items.
+
+00:01:29.600 --> 00:01:31.670
+Lets scroll down to the bottom.
+
+00:01:31.670 --> 00:01:38.270
+You can see here that we’ve added this bs-books-list
+selector in order to display our BooksListComponent
+
+00:01:38.270 --> 00:01:39.270
+html.
+
+00:01:39.270 --> 00:01:44.409
+But now, since we’re using a router, to
+display this content, we can just get rid
+
+00:01:44.409 --> 00:01:48.700
+of that selector and instead use the router-outlet
+selector.
+
+00:01:48.700 --> 00:01:55.030
+And that’s it, if you reload your app now
+no visible changes will be seen, but we have
+
+00:01:55.030 --> 00:01:57.640
+successfully implemented routing.
+
+00:01:57.640 --> 00:02:02.350
+One more thing we should do is inside the
+BooksListComponent typescript file.
+
+00:02:02.350 --> 00:02:06.210
+And since we’re using routing, we don’t
+need to have this selector definition.
+
+00:02:06.210 --> 00:02:13.359
+And a good rule of thumb here is we only need
+to use selectors inside a component when the
+
+00:02:13.359 --> 00:02:16.790
+component is nested inside of another component.
+

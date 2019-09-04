@@ -1,0 +1,212 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.079 --> 00:00:07.120
+Now that we’ve explored the concept of Inputs,
+we’re ready to move on to Outputs.
+
+00:00:07.120 --> 00:00:13.269
+Outputs are used in order to create custom
+events that sends data from your component
+
+00:00:13.269 --> 00:00:14.590
+to the outside world.
+
+00:00:14.590 --> 00:00:21.060
+There’s a few steps involved in creating
+our Output Event and then using it.
+
+00:00:21.060 --> 00:00:28.449
+So what we want to do is send some information
+from our nested component to our parent component
+
+00:00:28.449 --> 00:00:32.189
+and then display that information in the parent
+component.
+
+00:00:32.189 --> 00:00:38.870
+So the first thing that we do is create a
+property assigned to an Output similar to
+
+00:00:38.870 --> 00:00:41.440
+how we created our Input property.
+
+00:00:41.440 --> 00:00:45.100
+The difference is we’re using an EventEmitter.
+
+00:00:45.100 --> 00:00:47.390
+Lets dissect this a bit.
+
+00:00:47.390 --> 00:00:53.460
+An EventEmitter is an object that listens
+for something to happen and then publishes
+
+00:00:53.460 --> 00:00:55.460
+an event when triggered.
+
+00:00:55.460 --> 00:00:58.870
+This is what’s known as the Observer pattern.
+
+00:00:58.870 --> 00:01:03.820
+Say we create a new EventEmitter named notify
+in our child component.
+
+00:01:03.820 --> 00:01:11.030
+Now, our child component has become a publisher
+and is going to be used to send data up to
+
+00:01:11.030 --> 00:01:14.790
+its parent using the Emit method.
+
+00:01:14.790 --> 00:01:21.020
+The parent component now becomes a subscriber
+to the notify output.
+
+00:01:21.020 --> 00:01:27.610
+This means that when notify has emitted this
+‘send message’ string it will be automatically
+
+00:01:27.610 --> 00:01:36.480
+picked up by the parent and can be used in
+a method defined in the parent component.
+
+00:01:36.480 --> 00:01:43.300
+The process of setting up an Output to send
+events from child to parent works like this:
+
+00:01:43.300 --> 00:01:49.490
+First, we open up our child component file
+and we import Output and EventEmitter from
+
+00:01:49.490 --> 00:01:51.020
+angular core.
+
+00:01:51.020 --> 00:01:55.430
+Then we define an Output with a decorator
+followed by a property name.
+
+00:01:55.430 --> 00:01:58.700
+In this case, we’ll use the name notify.
+
+00:01:58.700 --> 00:02:01.409
+Notify is of Type EventEmitter.
+
+00:02:01.409 --> 00:02:08.789
+So remember EventEmitter is an object and
+since its an object it also has a type and
+
+00:02:08.789 --> 00:02:13.950
+that’s what these greater than less than
+symbols known as a Generic are doing, its
+
+00:02:13.950 --> 00:02:18.160
+setting this EventEmitter to a type of String.
+
+00:02:18.160 --> 00:02:24.980
+So generic is a feature of Typescript that
+simply defines the Type of an instance such
+
+00:02:24.980 --> 00:02:29.300
+as an object instance or function instance.
+
+00:02:29.300 --> 00:02:35.920
+So we set notify as type EventEmitter and
+set it equal to a new instance of EventEmitter
+
+00:02:35.920 --> 00:02:42.360
+that is of type string and then we invoke
+our EventEmitter using parenthesis.
+
+00:02:42.360 --> 00:02:48.069
+We’re using a type of string here because
+we’re going to be emitting a value that
+
+00:02:48.069 --> 00:02:49.510
+is a string.
+
+00:02:49.510 --> 00:02:52.170
+But EventEmitters can be of type any.
+
+00:02:52.170 --> 00:02:57.620
+They can be of type String, Number, Boolean
+or Interface for example.
+
+00:02:57.620 --> 00:03:02.819
+Now we need to setup a method that does something
+with our Output property.
+
+00:03:02.819 --> 00:03:08.680
+So in our child component HTML, when a user
+clicks a button, we’re going to trigger
+
+00:03:08.680 --> 00:03:11.630
+the onClick method.
+
+00:03:11.630 --> 00:03:18.970
+The onClick method will in turn use our notify
+property and emit a string of ‘Message from
+
+00:03:18.970 --> 00:03:19.970
+child’.
+
+00:03:19.970 --> 00:03:25.920
+Now, there’s 2 steps we need to take in
+our parent in order to display our child’s
+
+00:03:25.920 --> 00:03:26.920
+message.
+
+00:03:26.920 --> 00:03:29.540
+The first is in our parent HTML file.
+
+00:03:29.540 --> 00:03:35.780
+So inside the child selector, we need to wrap
+our notify property in parenthesis.
+
+00:03:35.780 --> 00:03:41.640
+This is our event watcher that gets triggered
+anytime someone clicks this button in our
+
+00:03:41.640 --> 00:03:42.790
+child.
+
+00:03:42.790 --> 00:03:48.090
+We then set this equal to a method we’ll
+create inside of the parent.
+
+00:03:48.090 --> 00:03:54.970
+This dollar sign event parameter stores whatever
+has been emitted from the child, in this case
+
+00:03:54.970 --> 00:03:58.680
+its going to store the ‘Message from child’
+string.
+
+00:03:58.680 --> 00:04:03.580
+Now in our parent we create the onNotifyClicked
+method.
+
+00:04:03.580 --> 00:04:08.879
+Then inside here we’re just going to set
+the message we received equal to a property
+
+00:04:08.879 --> 00:04:11.370
+called showMessage.
+
+00:04:11.370 --> 00:04:16.829
+Then we can display our message using interpolation
+inside our parent HTML file.
+
+00:04:16.829 --> 00:04:22.719
+So, when somebody clicks this button in our
+child component, we’ll see the string ‘Message
+
+00:04:22.719 --> 00:04:28.310
+from child’ inside of this showMessage property
+inside of our parent.
+
+00:04:28.310 --> 00:04:31.529
+Now lets walk through this process inside
+of our application.
+

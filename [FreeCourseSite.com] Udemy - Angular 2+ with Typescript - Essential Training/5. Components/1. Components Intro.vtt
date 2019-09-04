@@ -1,0 +1,22 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.660 --> 00:00:05.760
+Components are at the heart of Angular 2.
+
+00:00:05.760 --> 00:00:11.330
+In this section we’ll discuss the nuts and
+bolts of creating these components.
+
+00:00:11.330 --> 00:00:18.010
+This will include what’s involved in constructing
+our component decorators and classes, how
+
+00:00:18.010 --> 00:00:24.510
+we can create nested components that also
+work as directives, and how we can define
+
+00:00:24.510 --> 00:00:27.929
+styles and templates inside of our components.
+

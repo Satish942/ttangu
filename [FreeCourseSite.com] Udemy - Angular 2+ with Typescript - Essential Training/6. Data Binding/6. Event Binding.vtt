@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.439 --> 00:00:06.810
+The last type of data binding that we need
+to talk about is event binding.
+
+00:00:06.810 --> 00:00:10.299
+Event binding is used to respond to user actions.
+
+00:00:10.299 --> 00:00:15.739
+So for example, when a user clicks on a button
+we want to perform some action.
+
+00:00:15.739 --> 00:00:21.630
+That action could be to display some content,
+fire off an ajax request, or to update some
+
+00:00:21.630 --> 00:00:23.060
+property.
+
+00:00:23.060 --> 00:00:28.760
+When performing event binding, we start inside
+of our template and wrap the event name we’re
+
+00:00:28.760 --> 00:00:31.820
+targeting inside of parenthesis.
+
+00:00:31.820 --> 00:00:37.730
+And then we need to set our event equal to
+the name of a method statement inside of quotes
+
+00:00:37.730 --> 00:00:41.629
+that is also invoked using parenthesis.
+
+00:00:41.629 --> 00:00:47.819
+Method statements are located inside of our
+class and are defined below our properties.
+
+00:00:47.819 --> 00:00:54.210
+In this example we’ll be showing or hiding
+an image based on the click of a button.
+
+00:00:54.210 --> 00:01:00.319
+Notice how we’ve set our hideImage method
+to be of type void meaning the method will
+
+00:01:00.319 --> 00:01:02.769
+not have a return value.
+
+00:01:02.769 --> 00:01:05.720
+In this example we’re using the click event.
+
+00:01:05.720 --> 00:01:11.640
+We’re actually able to bind to any of the
+standard web events provided to us within
+
+00:01:11.640 --> 00:01:12.640
+the browser.
+
+00:01:12.640 --> 00:01:18.030
+To find about all the different events that
+we can bind to, you can navigate over to the
+
+00:01:18.030 --> 00:01:22.720
+mozilla docs slash web slash events.
+
+00:01:22.720 --> 00:01:27.910
+And you can scroll down on this page to check
+out all the different events available.
+
+00:01:27.910 --> 00:01:33.420
+Lets now implement event binding inside our
+application.
+

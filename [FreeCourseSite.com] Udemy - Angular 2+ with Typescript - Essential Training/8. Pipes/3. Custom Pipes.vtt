@@ -1,0 +1,250 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.459 --> 00:00:06.840
+In this video we’re going to see how you
+can go about creating your own custom pipes.
+
+00:00:06.840 --> 00:00:10.550
+To create a custom pipe there are 3 main steps.
+
+00:00:10.550 --> 00:00:15.380
+First we create our pipe file and define what
+our custom pipe should do.
+
+00:00:15.380 --> 00:00:22.980
+Second, we import our pipe file into our appModule
+file and it to our list of declarations.
+
+00:00:22.980 --> 00:00:28.749
+Third, we use our custom pipe name inside
+of our HTML file.
+
+00:00:28.749 --> 00:00:33.661
+I’m going to first walk you through this
+in our slides and then we’ll add a new pipe
+
+00:00:33.661 --> 00:00:36.320
+to our application.
+
+00:00:36.320 --> 00:00:38.920
+The first thing is to create a new file.
+
+00:00:38.920 --> 00:00:44.670
+The file name should begin with what the pipe
+does followed by the keyword pipe.
+
+00:00:44.670 --> 00:00:51.359
+This file will contain a Decorator called
+Pipe that will hold the name of our new pipe.
+
+00:00:51.359 --> 00:00:56.960
+This name property represents our pipe reference
+for use inside of our HTML file.
+
+00:00:56.960 --> 00:01:02.230
+Next, we need import from angular core PipeTransform
+and Pipe.
+
+00:01:02.230 --> 00:01:08.439
+And now we can export a new class creating
+a name that makes sense, the purpose of this
+
+00:01:08.439 --> 00:01:13.899
+pipe is going to be to limit the amount of
+characters, so we’ll name it TruncatePipe.
+
+00:01:13.899 --> 00:01:16.890
+Then we say implements PipeTransform.
+
+00:01:16.890 --> 00:01:23.360
+Implements is a keyword that allows us to
+use methods and properties inside of PipeTransform.
+
+00:01:23.360 --> 00:01:28.470
+So inside of PipeTransform there is a method
+called transform and this is the method that
+
+00:01:28.470 --> 00:01:32.060
+we’ll use in order to create our new custom
+pipe.
+
+00:01:32.060 --> 00:01:35.180
+The transform method takes 2 parameters.
+
+00:01:35.180 --> 00:01:39.810
+The first parameter is the value or the data
+we want to change.
+
+00:01:39.810 --> 00:01:45.020
+Depending on the developer you might see this
+parameter called input, or value.
+
+00:01:45.020 --> 00:01:50.520
+And the 2nd parameter is an optional string
+of arguments that’s used to alter the way
+
+00:01:50.520 --> 00:01:52.399
+our data is displayed.
+
+00:01:52.399 --> 00:01:58.310
+And inside our method is where we put our
+logic – which is usually going to be returning
+
+00:01:58.310 --> 00:01:59.870
+our manipulated data.
+
+00:01:59.870 --> 00:02:06.450
+Once our pipe is built, we need it to add
+it as an import to our AppModule file and
+
+00:02:06.450 --> 00:02:10.420
+include it in list of declarations like this.
+
+00:02:10.420 --> 00:02:16.850
+Then we’re able to use our custom pipe inside
+the HTML file the same way we use builtin
+
+00:02:16.850 --> 00:02:17.910
+pipes.
+
+00:02:17.910 --> 00:02:22.860
+So now that you know what’s involved in
+creating a pipe, lets add a new custom pipe
+
+00:02:22.860 --> 00:02:24.540
+into our application.
+
+00:02:24.540 --> 00:02:31.110
+I’m going to add our custom pipe to the
+shared folder since we may want to reuse this
+
+00:02:31.110 --> 00:02:33.610
+pipe in multiple components.
+
+00:02:33.610 --> 00:02:36.570
+And I’ll create a new folder here called
+pipes.
+
+00:02:36.570 --> 00:02:45.660
+Then I’ll go into this folder and add a
+new file named truncate.pipe.ts.
+
+00:02:45.660 --> 00:02:51.640
+Lets open up that file and first thing we’ll
+do is add a Pipe decorator and name our pipe
+
+00:02:51.640 --> 00:02:54.320
+limitChar.
+
+00:02:54.320 --> 00:03:00.260
+This pipe is going to limit the amount of
+characters shown in a book description.
+
+00:03:00.260 --> 00:03:08.040
+The next thing we do is import pipe and pipeTransform
+from angular core.
+
+00:03:08.040 --> 00:03:10.880
+Now lets create our pipe class.
+
+00:03:10.880 --> 00:03:19.400
+We’ll name our pipe TruncatePipe and we’re
+using PipeTransform methods so we need to
+
+00:03:19.400 --> 00:03:21.540
+implement it.
+
+00:03:21.540 --> 00:03:27.430
+Then inside the body of the class we’ll
+use the transform method.
+
+00:03:27.430 --> 00:03:31.190
+The first parameter references the data that
+currently exists.
+
+00:03:31.190 --> 00:03:36.310
+I call this input and we expect to get a string.
+
+00:03:36.310 --> 00:03:41.230
+The second parameter is optional and I’m
+going to name this parameter limit which is
+
+00:03:41.230 --> 00:03:42.430
+a number.
+
+00:03:42.430 --> 00:03:48.100
+So this represents the maximum number of characters
+to be displayed in the view.
+
+00:03:48.100 --> 00:03:52.940
+And we’ll be setting that max number in
+the view right next to our pipe.
+
+00:03:52.940 --> 00:03:59.560
+And this is the logic – we’re using a
+ternary operator to say if the input length
+
+00:03:59.560 --> 00:04:07.190
+is greater then our limit then cut off those
+characters at the limit an add an ellipses.
+
+00:04:07.190 --> 00:04:09.790
+Otherwise, display the input.
+
+00:04:09.790 --> 00:04:15.290
+In order to use our custom pipe anywhere inside
+of our application, we need to make sure its
+
+00:04:15.290 --> 00:04:18.140
+added to our AppModule file.
+
+00:04:18.140 --> 00:04:24.229
+So opening up that file, we’ll first import
+our PipeTransform file and then add it to
+
+00:04:24.229 --> 00:04:26.419
+our declarations array.
+
+00:04:26.419 --> 00:04:32.590
+And that’s it, our pipe is now ready to
+be used.
+
+00:04:32.590 --> 00:04:36.789
+So we’ll open up the corresponding bookslist
+HTML file.
+
+00:04:36.789 --> 00:04:47.380
+I’ll add an area here for the description
+right below the author.
+
+00:04:47.380 --> 00:04:50.560
+Then I’ll add my new limitChar pipe.
+
+00:04:50.560 --> 00:04:56.100
+And here is where I’ll specify the limit
+of string characters I want to display in
+
+00:04:56.100 --> 00:04:57.100
+my view.
+
+00:04:57.100 --> 00:05:02.520
+I’ll add a colon and then my limit inside
+of quotation marks.
+
+00:05:02.520 --> 00:05:07.949
+This can be whatever you decide – and for
+demonstration purposes I’ll say 10.
+
+00:05:07.949 --> 00:05:11.939
+I’ll save everything and flip over to my
+app.
+
+00:05:11.939 --> 00:05:19.300
+And right here you can see my pipe is working
+cutting off my description after 10 characters
+
+00:05:19.300 --> 00:05:20.699
+and adding the ellipses.
+

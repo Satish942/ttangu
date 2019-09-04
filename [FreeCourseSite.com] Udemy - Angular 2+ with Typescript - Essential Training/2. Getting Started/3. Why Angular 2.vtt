@@ -1,0 +1,90 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.380 --> 00:00:03.340
+So why Angular 2?
+
+00:00:03.340 --> 00:00:10.360
+Angular 2 was conceived as a complete rewrite
+to Angular 1 in order to fulfill the expectations
+
+00:00:10.360 --> 00:00:17.430
+of modern developers who demand blazing speed
+and responsiveness from their web applications.
+
+00:00:17.430 --> 00:00:24.220
+By offering faster initial loads, improved
+change detection and improved rendering – Angular
+
+00:00:24.220 --> 00:00:28.479
+2 is up to five times faster then its original
+build.
+
+00:00:28.479 --> 00:00:33.850
+Angular 2 is sleeker and composes a more simplified
+API.
+
+00:00:33.850 --> 00:00:39.790
+Many of the original constructs have been
+removed in favor of easier to remember patterns
+
+00:00:39.790 --> 00:00:41.500
+for writing our code.
+
+00:00:41.500 --> 00:00:43.060
+Angular 2 is modern.
+
+00:00:43.060 --> 00:00:49.600
+By copying the huge success of the React framework,
+it decided to put web components at the heart
+
+00:00:49.600 --> 00:00:51.140
+of the Angular 2.
+
+00:00:51.140 --> 00:00:56.660
+As a result, Angular apps are now much more
+responsive to changes in state.
+
+00:00:56.660 --> 00:01:03.440
+The latest version of Javascript known as
+Ecmascript2015 or just ES2015 wasn’t around
+
+00:01:03.440 --> 00:01:05.910
+back when Angular 1 was first created.
+
+00:01:05.910 --> 00:01:12.759
+By taking advantage of some of the new features
+like classes, modules and decorators, Angular
+
+00:01:12.759 --> 00:01:18.530
+2 takes building sophisticated high performing
+applications to a whole new level.
+
+00:01:18.530 --> 00:01:23.350
+Angular 2 is written in Typescript, which
+is a superset of Javascript.
+
+00:01:23.350 --> 00:01:27.130
+I absolutely love writing my code in Typescript.
+
+00:01:27.130 --> 00:01:33.189
+And the reason is Typescript give us access
+to all the enhancements of ES2015 including
+
+00:01:33.189 --> 00:01:38.560
+future ES7 enhancements as well as built-in
+strong typing.
+
+00:01:38.560 --> 00:01:43.311
+So what hasn’t changed between Angular v1
+and v2?
+
+00:01:43.311 --> 00:01:46.380
+I’m happy to say that the core concepts
+are still around.
+
+00:01:46.380 --> 00:01:53.549
+And that is to help developers create Modular,
+Maintainable and Testable applications.
+

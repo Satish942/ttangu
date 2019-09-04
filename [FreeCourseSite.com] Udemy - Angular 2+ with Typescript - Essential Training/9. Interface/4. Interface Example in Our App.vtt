@@ -1,0 +1,96 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.699 --> 00:00:07.479
+Applications will usually get their data from
+one of two places, either a local database
+
+00:00:07.479 --> 00:00:09.040
+or an outside API.
+
+00:00:09.040 --> 00:00:14.440
+For this project, I’ve supplied you with
+a JSON file that includes data you would typically
+
+00:00:14.440 --> 00:00:17.460
+get back from either of these sources.
+
+00:00:17.460 --> 00:00:22.290
+It is located in your api folder and is called
+books.json.
+
+00:00:22.290 --> 00:00:27.810
+If we open it up, you can see that it holds
+all of the data that’s currently being hardcoded
+
+00:00:27.810 --> 00:00:29.940
+into our application.
+
+00:00:29.940 --> 00:00:35.260
+Lets now go ahead and create an interface
+to strongly type this data.
+
+00:00:35.260 --> 00:00:43.090
+To do this we’ll add a new file into our
+books folder named book.ts.
+
+00:00:43.090 --> 00:00:48.600
+And this is the standard file naming convention
+for interfaces, we just use the singular name
+
+00:00:48.600 --> 00:00:51.780
+of the interface that we’re referencing.
+
+00:00:51.780 --> 00:00:57.649
+Opening up this file, lets begin by making
+sure that we export our interface so we can
+
+00:00:57.649 --> 00:01:00.180
+use it in other files.
+
+00:01:00.180 --> 00:01:05.140
+And then we’ll name our interface IBook.
+
+00:01:05.140 --> 00:01:10.009
+Inside of our interface we’ll define the
+types for each one of the properties listed
+
+00:01:10.009 --> 00:01:12.689
+in our books.json file.
+
+00:01:12.689 --> 00:01:30.950
+So we’ll need an id, name, productCode,
+releaseDate, description, author, genre, specifications,
+
+00:01:30.950 --> 00:01:41.819
+inStock, price, starRating, and imageUrl
+Now if I wanted to use this interface in my
+
+00:01:41.819 --> 00:01:50.359
+bookslist component file, then I would just
+need to import it like this.
+
+00:01:50.359 --> 00:01:56.990
+Then I can comment out this IBook interface
+that we already declared below.
+
+00:01:56.990 --> 00:02:02.659
+And if we check our implementation down below
+notice we are getting a squiggly line error.
+
+00:02:02.659 --> 00:02:09.330
+To fix this we would need to change the key
+names to match what we defined in our interface
+
+00:02:09.330 --> 00:02:10.350
+above.
+
+00:02:10.350 --> 00:02:15.819
+Since this was just an introduction to interfaces
+I’m going to leave it how it is and we’ll
+
+00:02:15.819 --> 00:02:19.860
+re-visit and fix this when we get to the section
+called Services.
+

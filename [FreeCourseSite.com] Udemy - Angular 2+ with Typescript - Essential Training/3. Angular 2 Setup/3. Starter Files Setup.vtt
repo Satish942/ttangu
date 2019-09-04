@@ -1,0 +1,143 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.110 --> 00:00:02.110
+Welcome to the setup video.
+
+00:00:02.110 --> 00:00:05.130
+In this video I’m going to walk you through
+getting setup with our starting code.
+
+00:00:05.130 --> 00:00:08.390
+There’s 2 ways you can go about starting
+a new project.
+
+00:00:08.390 --> 00:00:13.889
+The first way is to install the Angular CLI
+tool, which is a command line interface for
+
+00:00:13.889 --> 00:00:18.660
+generating new applications and can be found
+here at cli.angular.io.
+
+00:00:18.660 --> 00:00:25.410
+What you do is first download the CLI through
+your terminal and then you can use these easy
+
+00:00:25.410 --> 00:00:26.840
+commands to create new projects.
+
+00:00:26.840 --> 00:00:28.080
+This looks like an amazing tool that’s still
+being developed but I encourage you to check
+
+00:00:28.080 --> 00:00:29.080
+it out and see what their generated code looks
+like.
+
+00:00:29.080 --> 00:00:32.689
+The second way is to download or clone some
+starter code such as the code given to us
+
+00:00:32.689 --> 00:00:34.000
+by angular.
+
+00:00:34.000 --> 00:00:38.730
+The link to official starter template can
+be found in the setup portion of the Guide
+
+00:00:38.730 --> 00:00:41.120
+at angular.io.
+
+00:00:41.120 --> 00:00:45.360
+Angular tells us that we can either clone
+or download to get going.
+
+00:00:45.360 --> 00:00:50.280
+So this code here in the angular repo is almost
+the same as what I’m supplying you with
+
+00:00:50.280 --> 00:00:56.440
+both in the resources section of this lecture
+as well as in my repo in the starter folder
+
+00:00:56.440 --> 00:00:59.960
+at jakblak/learn-angular-2.
+
+00:00:59.960 --> 00:01:05.080
+The only main difference will be how updated
+the package.json file is, as Angular works
+
+00:01:05.080 --> 00:01:07.860
+to keep pushing out new updates.
+
+00:01:07.860 --> 00:01:10.860
+When we open the starter folder it looks like
+this.
+
+00:01:10.860 --> 00:01:14.400
+Using this setup we only need to do 2 things
+to get going.
+
+00:01:14.400 --> 00:01:19.770
+First, we navigate to the location of our
+folder in our terminal and type the command
+
+00:01:19.770 --> 00:01:23.070
+‘npm install’.
+
+00:01:23.070 --> 00:01:26.880
+This will download all of the dependencies
+that we need in order get going.
+
+00:01:26.880 --> 00:01:30.590
+And once everything has finished downloading,
+we then type ‘npm start’.
+
+00:01:30.590 --> 00:01:33.670
+This will load up our starter application
+in a browser.
+
+00:01:33.670 --> 00:01:40.390
+This will also enable live reloading, so that
+when make a change to our code and save the
+
+00:01:40.390 --> 00:01:47.710
+file, our code gets re-compiled and changes
+automatically refreshed inside the browser.
+
+00:01:47.710 --> 00:01:53.710
+The code that’s making this happen is located
+inside the package.json file at the top under
+
+00:01:53.710 --> 00:01:54.820
+scripts.
+
+00:01:54.820 --> 00:02:00.650
+Along with starting up our app inside a browser
+and enabling live reloading, this script is
+
+00:02:00.650 --> 00:02:04.490
+also compiles our typescript into javascript
+files.
+
+00:02:04.490 --> 00:02:10.720
+So for every typescript file there is a corresponding
+ES5 javascript file.
+
+00:02:10.720 --> 00:02:16.099
+And these javascript files are the ones that
+are being loaded up and read by the browser.
+
+00:02:16.099 --> 00:02:20.540
+Besides that, there’s quite a bit going
+on inside of these starter files.
+
+00:02:20.540 --> 00:02:26.120
+So I’ve moved all further explanations of
+what these files do inside of the last section
+
+00:02:26.120 --> 00:02:29.050
+in this course entitled Setup Revisited.
+

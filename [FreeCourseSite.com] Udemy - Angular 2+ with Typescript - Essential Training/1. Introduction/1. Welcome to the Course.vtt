@@ -1,0 +1,82 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.220 --> 00:00:05.680
+Hello everyone and welcome to the course Angular
+2 Essential Training.
+
+00:00:05.680 --> 00:00:11.010
+I hope you are just as excited as I am to
+learn about and create awesome applications
+
+00:00:11.010 --> 00:00:14.590
+using the brand new Angular 2 framework.
+
+00:00:14.590 --> 00:00:20.439
+This is a beginner level course and will assume
+no prior experience to using either Angular
+
+00:00:20.439 --> 00:00:26.150
+version 1 or 2 or any experience with typescript.
+
+00:00:26.150 --> 00:00:30.259
+You should however, have a basic understanding
+of Javascript.
+
+00:00:30.259 --> 00:00:35.930
+This would include how to work with things
+such as variables, objects, and arrays.
+
+00:00:35.930 --> 00:00:43.030
+I structured this course by first presenting
+a key Angular 2 concept using powerpoint slides,
+
+00:00:43.030 --> 00:00:46.550
+and then working through an example in our
+sample application.
+
+00:00:46.550 --> 00:00:50.850
+And then providing quizzes to re-inforce what
+you’ve learned.
+
+00:00:50.850 --> 00:00:53.740
+The application we’ll build is a Book store.
+
+00:00:53.740 --> 00:00:59.260
+Users will be able to add to favorite the
+book of their choice and can also click through
+
+00:00:59.260 --> 00:01:01.710
+to see the book details.
+
+00:01:01.710 --> 00:01:06.610
+Project files will be included in all lectures
+where we work on app.
+
+00:01:06.610 --> 00:01:13.000
+And I’ve also set up a github repo, which
+is located at github.com / jakblak / learn
+
+00:01:13.000 --> 00:01:14.670
+angular 2.
+
+00:01:14.670 --> 00:01:19.640
+By the end of the course you will be familiar
+with all of the important features in building
+
+00:01:19.640 --> 00:01:28.350
+Angular 2 applications including: The Typescript
+language, Components, NgModules, Data Binding,
+
+00:01:28.350 --> 00:01:35.990
+Directives, Pipes, handling Inputs and Outputs,
+Observables, and Routing.
+
+00:01:35.990 --> 00:01:40.909
+Additionally, I plan on keeping this course
+up to date by adding new content as the Angular
+
+00:01:40.909 --> 00:01:42.760
+team releases new updates.
+

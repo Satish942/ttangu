@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.189 --> 00:00:05.400
+Components are the foundation for modular
+development.
+
+00:00:05.400 --> 00:00:13.400
+They allow us to separate our code into easy
+to manage chunks based on features and uses.
+
+00:00:13.400 --> 00:00:18.030
+Components descend from other components in
+a tree-like manner.
+
+00:00:18.030 --> 00:00:24.500
+This AppComponent represents the root Component
+in our tree structure – so that all future
+
+00:00:24.500 --> 00:00:28.080
+components will become a descendent.
+
+00:00:28.080 --> 00:00:35.559
+For example we could have a navigation component,
+a sidebar component and a posts component.
+
+00:00:35.559 --> 00:00:41.149
+Then inside any one of these we can nest other
+feature related components.
+
+00:00:41.149 --> 00:00:47.440
+In this example we could nest sidebar related
+component feature to create widgets and a
+
+00:00:47.440 --> 00:00:48.440
+calendar.
+
+00:00:48.440 --> 00:00:54.069
+Then if we wanted to, we could easily re-use
+our widget and calendar components in other
+
+00:00:54.069 --> 00:00:55.909
+views.
+
+00:00:55.909 --> 00:01:00.749
+And this is what our folder structure would
+look like for this contrived app, with the
+
+00:01:00.749 --> 00:01:06.430
+widgets and calendar folders located inside
+of the sidebar folder.
+
+00:01:06.430 --> 00:01:11.760
+The beauty of this modular development style
+is that each one of these components represent
+
+00:01:11.760 --> 00:01:16.520
+features that we can easily isolate, test
+and reuse.
+
+00:01:16.520 --> 00:01:22.350
+This creates DRY components in which we’re
+not repeating our code.
+
+00:01:22.350 --> 00:01:27.720
+Additionally, we don’t have to worry about
+any side effects occuring in other parts of
+
+00:01:27.720 --> 00:01:33.200
+our application since our code is contained
+in its own isolated module.
+

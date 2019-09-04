@@ -1,0 +1,115 @@
+WEBVTT
+
+1
+00:00:01.439 --> 00:00:07.240
+Back in our app we’re going to create event
+binding to toggle between showing or hiding
+
+2
+00:00:07.240 --> 00:00:08.390
+one of our images.
+
+3
+00:00:08.390 --> 00:00:13.250
+So let’s start by opening up our books-list.html
+file.
+
+4
+00:00:13.250 --> 00:00:17.400
+We’ll add a button that’s going to trigger
+our click event.
+
+5
+00:00:17.400 --> 00:00:24.290
+We’ll use a bootstrap class for styling
+and then create our click event setting it
+
+6
+00:00:24.290 --> 00:00:31.510
+equal to a method we’ll define in our class
+named toggleImage.
+
+7
+00:00:31.510 --> 00:00:38.899
+Now switching back into our class we’ll
+first add a property named showImage which
+
+8
+00:00:38.899 --> 00:00:43.309
+will be a boolean and set to true.
+
+9
+00:00:43.309 --> 00:00:46.670
+Now we’ll create our toggleImage method.
+
+10
+00:00:46.670 --> 00:00:56.239
+The logic inside the method will toggle the
+image to show or hide when our button is clicked.
+
+11
+00:00:56.239 --> 00:01:01.489
+And the last thing we need to do is connect
+our showImage property to an image we want
+
+12
+00:01:01.489 --> 00:01:05.390
+to toggle in the view.
+
+13
+00:01:05.390 --> 00:01:08.430
+We can use the ngIf directive here.
+
+14
+00:01:08.430 --> 00:01:12.000
+This will check the boolean value of our property.
+
+15
+00:01:12.000 --> 00:01:19.080
+So if our showImage property is set to true,
+as it is in the default, our image will appear.
+
+16
+00:01:19.080 --> 00:01:24.200
+If the showImage property is set to false
+then it will not appear.
+
+17
+00:01:24.200 --> 00:01:28.950
+Directives like this ngIf will be discussed
+in detail in the next section.
+
+18
+00:01:28.950 --> 00:01:35.310
+Now we can go ahead and test out our new feature.
+
+19
+00:01:35.310 --> 00:01:40.580
+And you can see we are able to toggle our
+image on and off.
+
+20
+00:01:40.580 --> 00:01:50.240
+One small enhancement we can make here is
+to add interpolation with our property.
+
+21
+00:01:50.240 --> 00:01:58.990
+This is a terniary which checks whether or
+not something is true.
+
+22
+00:01:58.990 --> 00:02:05.050
+So if showImage is true then the text Hide
+Image will appear in the button and if showImage
+
+23
+00:02:05.050 --> 00:02:14.730
+is false then the text Show Image will be
+shown in the button.
+
+24
+00:02:14.730 --> 00:02:19.560
+And on save you can see that our hide and
+show text is being updated.
+

@@ -1,0 +1,87 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.260 --> 00:00:06.590
+Switching now back into our app, I’m going
+to add our 2-way binding into the search field
+
+00:00:06.590 --> 00:00:09.180
+right here.
+
+00:00:09.180 --> 00:00:15.230
+So to do that I’m going to open up our app
+component.ts file and first define a property
+
+00:00:15.230 --> 00:00:17.420
+model to hold our search text.
+
+00:00:17.420 --> 00:00:24.289
+So I’ll say searchBox is of type string
+and set it equal to an empty string.
+
+00:00:24.289 --> 00:00:27.020
+That’s it for the component.
+
+00:00:27.020 --> 00:00:32.050
+And now we need to add the FormsModule to
+our list of imports in the appModule file.
+
+00:00:32.050 --> 00:00:38.260
+So navigating into our AppModule.ts file,
+I’ll add in the FormsModule to our list
+
+00:00:38.260 --> 00:00:46.309
+of imports and then also make sure we import
+it from @angular/forms.
+
+00:00:46.309 --> 00:00:54.049
+Now I’ll just add in my template binding
+logic in the associated HTML file.
+
+00:00:54.049 --> 00:01:01.179
+I can do that by declaring my banana in a
+box around our special ngModel directive.
+
+00:01:01.179 --> 00:01:07.260
+Then setting it equal to the property we defined
+in our class which is searchBox.
+
+00:01:07.260 --> 00:01:14.470
+We also now actually have include a name attribute
+within our HTML equal to our property.
+
+00:01:14.470 --> 00:01:19.360
+This is something new to latest Angular 2
+release, and if this name attribute is not
+
+00:01:19.360 --> 00:01:24.740
+defined we will get an error and our template
+won’t be displayed correctly.
+
+00:01:24.740 --> 00:01:30.140
+One thing that’s cool is that we can this
+2-way binding and display it in other areas
+
+00:01:30.140 --> 00:01:32.780
+of our app using interpolation.
+
+00:01:32.780 --> 00:01:38.960
+So to demonstrate I’m just going to create
+a new link in our navBar and add in our property
+
+00:01:38.960 --> 00:01:42.190
+searchBox inside of the double curly’s.
+
+00:01:42.190 --> 00:01:48.430
+So I’ll save these now and head back over
+to my app.
+
+00:01:48.430 --> 00:01:53.530
+And I can test this out by adding in some
+text to our search field.
+
+00:01:53.530 --> 00:01:58.130
+And then we can see that both the 2-way binding
+and interpolation is now working.
+

@@ -1,0 +1,68 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.750 --> 00:00:06.930
+In this video I’m going to show you how
+hide our Javascript files from appearing in
+
+00:00:06.930 --> 00:00:08.299
+the editor.
+
+00:00:08.299 --> 00:00:13.800
+So when we’re compiling our typescript code,
+we get 2 new files created for each one of
+
+00:00:13.800 --> 00:00:18.560
+our typescript files that we don’t ever
+actually use or edit.
+
+00:00:18.560 --> 00:00:23.610
+These are the .js files and the .map.js files.
+
+00:00:23.610 --> 00:00:27.500
+The process of hiding these files works in
+a variety of text editors.
+
+00:00:27.500 --> 00:00:31.660
+But since I’m using sublime text, I’m
+going to show you how to do it just for my
+
+00:00:31.660 --> 00:00:33.110
+editor.
+
+00:00:33.110 --> 00:00:36.440
+So first we need to save our project.
+
+00:00:36.440 --> 00:00:44.170
+I’ll navigate into the packages folder of
+my sublime text and then save the project
+
+00:00:44.170 --> 00:00:47.989
+with the name noJS.
+
+00:00:47.989 --> 00:00:53.890
+Then once saved, I’ll click on this edit
+project link.
+
+00:00:53.890 --> 00:00:59.090
+This will take you to a file where you can
+edit the preferences so that it only affects
+
+00:00:59.090 --> 00:01:01.850
+this particular project.
+
+00:01:01.850 --> 00:01:08.520
+So I just needed to add in this excludes patterns
+and then specify an array of files that I
+
+00:01:08.520 --> 00:01:11.040
+want to exclude.
+
+00:01:11.040 --> 00:01:19.060
+Now once I save the file, you can see all
+of our .js and .js.map files have been removed
+
+00:01:19.060 --> 00:01:20.290
+just from the editor.
+

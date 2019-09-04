@@ -1,0 +1,116 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.670 --> 00:00:08.069
+Lets now look at a few of the structural or
+built-in directives given to us by angular.
+
+00:00:08.069 --> 00:00:11.500
+The first one we’ll look at is the NgIf
+directive.
+
+00:00:11.500 --> 00:00:17.340
+We use this directive when we want to add,
+remove or update view elements.
+
+00:00:17.340 --> 00:00:23.980
+We used NgIf in a previous section when we
+wanted to show or hide an image based on whether
+
+00:00:23.980 --> 00:00:26.680
+or not a button had been clicked.
+
+00:00:26.680 --> 00:00:32.230
+In this example our image would appear when
+showImage was in its True state.
+
+00:00:32.230 --> 00:00:38.910
+So in this way, NgIf can be used to show or
+hide something based on a boolean value.
+
+00:00:38.910 --> 00:00:43.289
+We can also use NgIf with conditional logic.
+
+00:00:43.289 --> 00:00:47.629
+Lets now look at a new example using a conditional.
+
+00:00:47.629 --> 00:00:53.260
+In this example I want to display a div with
+the number of books in stock only if there
+
+00:00:53.260 --> 00:00:55.480
+is more then 1 book in stock.
+
+00:00:55.480 --> 00:00:58.629
+Otherwise nothing is going to be displayed.
+
+00:00:58.629 --> 00:01:03.499
+To do this lets open up our books-list.component.html
+file.
+
+00:01:03.499 --> 00:01:07.049
+And I’m going to add a new p class right
+below our reviews.
+
+00:01:07.049 --> 00:01:12.380
+I’m going to change the styling to text
+success.
+
+00:01:12.380 --> 00:01:19.009
+Then also add in a div above for a little
+space.
+
+00:01:19.009 --> 00:01:25.441
+Now I’m going to create my ngIf here setting
+it equal to booksInStock greater than 0.
+
+00:01:25.441 --> 00:01:37.109
+Then I’m going to add the text Number in
+Stock and interpolate booksInStock.
+
+00:01:37.109 --> 00:01:43.159
+So since we haven’t yet created this booksInStock
+property, we should expect not to see this
+
+00:01:43.159 --> 00:01:44.789
+p element show up.
+
+00:01:44.789 --> 00:01:50.920
+So if we save and refresh the app, as you
+can see nothing is appearing.
+
+00:01:50.920 --> 00:01:54.950
+Lets fix that by creating our property inside
+of our component file.
+
+00:01:54.950 --> 00:02:00.319
+We’ll say booksInStock is a number equal
+to 2.
+
+00:02:00.319 --> 00:02:09.869
+Then we’ll save this file and on reload,
+and now you can see our element appears.
+
+00:02:09.869 --> 00:02:14.580
+This is a contrived example but you can imagine
+that if we were retrieving some data from
+
+00:02:14.580 --> 00:02:21.190
+an API and we only wanted to display the data
+if it existed or was greater then a certain
+
+00:02:21.190 --> 00:02:22.190
+number.
+
+00:02:22.190 --> 00:02:27.230
+Another common use case is when we want to
+display some message only when an error has
+
+00:02:27.230 --> 00:02:32.920
+occurred, then we would be using ngIf in a
+very similar way.
+
+00:02:32.920 --> 00:02:35.270
+Now lets move on to the ngFor directive.
+

@@ -1,0 +1,54 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.090 --> 00:00:05.960
+In this section we’re going to be discussing
+data binding in Angular.
+
+00:00:05.960 --> 00:00:10.700
+Data binding is the mechanism that we use
+for communicating between the template and
+
+00:00:10.700 --> 00:00:12.860
+the component class.
+
+00:00:12.860 --> 00:00:18.550
+After defining our properties and methods
+inside of our class we’re then able to use
+
+00:00:18.550 --> 00:00:24.510
+special syntax in our template in order to
+display data and process any changes that
+
+00:00:24.510 --> 00:00:27.170
+are made to that data.
+
+00:00:27.170 --> 00:00:31.720
+There are 3 different types of binding that
+we can use.
+
+00:00:31.720 --> 00:00:37.340
+The first is one way binding – which takes
+our declared class properties and displays
+
+00:00:37.340 --> 00:00:44.820
+them using curly brackets, next we have 2-way
+binding which allows users to update the model
+
+00:00:44.820 --> 00:00:49.910
+and is used places like input boxes and form
+fields.
+
+00:00:49.910 --> 00:00:56.489
+And finally we have Event binding – which
+takes users actions such as clicks on buttons
+
+00:00:56.489 --> 00:01:01.449
+and then performs some action or logic defined
+within a method.
+
+00:01:01.449 --> 00:01:05.560
+Lets now see how each one of these works inside
+of our application.
+

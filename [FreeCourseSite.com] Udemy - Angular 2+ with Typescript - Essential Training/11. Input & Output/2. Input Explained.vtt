@@ -1,0 +1,129 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.250 --> 00:00:04.890
+Components, as we’ve learned, are at the
+heart of Angular.
+
+00:00:04.890 --> 00:00:10.150
+When composing our application our components
+form a tree-like structure in which these
+
+00:00:10.150 --> 00:00:12.640
+components become nested.
+
+00:00:12.640 --> 00:00:18.920
+These nested or Child components need a way
+of receiving data from its parent as well
+
+00:00:18.920 --> 00:00:21.970
+as sending data back to its parent.
+
+00:00:21.970 --> 00:00:27.510
+In order to accomplish this Angular provides
+us with Inputs and Outputs.
+
+00:00:27.510 --> 00:00:31.099
+Lets first focus on Inputs.
+
+00:00:31.099 --> 00:00:39.020
+Input is a decorator used inside a child component
+that allows data to flow from a parent component
+
+00:00:39.020 --> 00:00:42.190
+into the child component.
+
+00:00:42.190 --> 00:00:48.250
+Whenever a nested component wants to receive
+input from its container, it must expose a
+
+00:00:48.250 --> 00:00:52.190
+property next to an Input decorator.
+
+00:00:52.190 --> 00:00:57.989
+And this exposed property then gets binded
+to a value in the parent.
+
+00:00:57.989 --> 00:01:04.570
+So inside of our child component we first
+need to import the Input decorator.
+
+00:01:04.570 --> 00:01:09.060
+And then inside our class we invoke our Input
+here.
+
+00:01:09.060 --> 00:01:14.410
+And then we create a property of whatever
+we want, in this case named reviews.
+
+00:01:14.410 --> 00:01:19.049
+This property name can be anything, and you
+can think of it like a variable that’s going
+
+00:01:19.049 --> 00:01:24.040
+to represent some value we get from the parent.
+
+00:01:24.040 --> 00:01:28.170
+And then we need to define its type, which
+in this case is a number.
+
+00:01:28.170 --> 00:01:35.530
+So this property called reviews is going to
+contain a number of reviews given to us by
+
+00:01:35.530 --> 00:01:37.240
+the parent.
+
+00:01:37.240 --> 00:01:42.680
+In our current application we’re displaying
+the number of book reviews in our template
+
+00:01:42.680 --> 00:01:48.899
+using book.bookReviews and property in our
+class looks like this.
+
+00:01:48.899 --> 00:01:54.810
+Now the way we’re able to gain reference
+to bookReviews in our child component is by
+
+00:01:54.810 --> 00:01:59.240
+creating a binding inside of our child selector.
+
+00:01:59.240 --> 00:02:06.150
+So inside our parentComponent html file here
+we add in our child selector referencing the
+
+00:02:06.150 --> 00:02:10.700
+child component and then add a binding.
+
+00:02:10.700 --> 00:02:18.000
+We wrap the reviews property we defined in
+square brackets and then set it equal to a
+
+00:02:18.000 --> 00:02:20.250
+value inside the parent.
+
+00:02:20.250 --> 00:02:27.530
+So now our reviews child property has been
+assigned the value of bookReviews.
+
+00:02:27.530 --> 00:02:34.230
+And this means that inside of our child html
+file we can now reference the reviews property
+
+00:02:34.230 --> 00:02:36.879
+which is going to be populated with parent
+value.
+
+00:02:36.879 --> 00:02:43.090
+So if we we’re using interpolation here,
+we would see the number 15 displayed in our
+
+00:02:43.090 --> 00:02:44.580
+child template.
+
+00:02:44.580 --> 00:02:48.230
+Lets now practice using Inputs inside of our
+application.
+

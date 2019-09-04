@@ -1,0 +1,88 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.020 --> 00:00:06.660
+Now lets see how to add routing to links in
+our app using the routerLink directive.
+
+00:00:06.660 --> 00:00:11.809
+And all we need to do is use routerLink to
+bind to whichever route want shown.
+
+00:00:11.809 --> 00:00:17.160
+So you can think of the routerLink as a replacement
+for the href tag.
+
+00:00:17.160 --> 00:00:22.500
+The trickiest part about this is remembering
+to wrap the link location first in double
+
+00:00:22.500 --> 00:00:27.670
+quotes, then brackets, and then again in single
+quotes.
+
+00:00:27.670 --> 00:00:35.340
+Here, we’re saying bind the menu link of
+All Books to the route we defined in our app.module
+
+00:00:35.340 --> 00:00:37.550
+file called books.
+
+00:00:37.550 --> 00:00:43.399
+And when the link is clicked it takes us to
+our localhost:3000/books.
+
+00:00:43.399 --> 00:00:46.220
+So lets open our app.component html file.
+
+00:00:46.220 --> 00:00:53.300
+We’ll scroll down a bit and edit our navbar
+All Books link so that we’re using our routerLink
+
+00:00:53.300 --> 00:00:55.330
+and binding to our books route.
+
+00:00:55.330 --> 00:01:01.090
+Now, as you may recall – we’re already
+using this books route as the default view
+
+00:01:01.090 --> 00:01:03.360
+when a user enters our app.
+
+00:01:03.360 --> 00:01:08.829
+So lets instead make books a route that we
+can navigate to by clicking a button or this
+
+00:01:08.829 --> 00:01:09.829
+nav menu link.
+
+00:01:09.829 --> 00:01:11.510
+This means we’ll be adding a new HomeComponent
+to display when a user first enters the application.
+
+00:01:11.510 --> 00:01:13.200
+So here’s a challenge for you.
+
+00:01:13.200 --> 00:01:17.880
+See if can create a new component named HomeComponent.
+
+00:01:17.880 --> 00:01:23.109
+Then make HomeComponent the default view when
+a user enters your app.
+
+00:01:23.109 --> 00:01:30.130
+And also set up new links to both our All
+Books route when a user clicks a button as
+
+00:01:30.130 --> 00:01:33.289
+well as our home route in the nav menu.
+
+00:01:33.289 --> 00:01:38.579
+You could use something like a bootstrap jumbotron
+for the home.component html file and then
+
+00:01:38.579 --> 00:01:42.859
+edit this button link to navigate to our books
+route when clicked.
+

@@ -1,0 +1,212 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.550 --> 00:00:06.140
+In this video we’re going to be updating
+our app so that it looks more like our sample
+
+00:00:06.140 --> 00:00:07.720
+application.
+
+00:00:07.720 --> 00:00:10.620
+This is what our application is going to look
+like as we progress.
+
+00:00:10.620 --> 00:00:17.320
+Its going to have a main page listing some
+books, then an inner page containing the book
+
+00:00:17.320 --> 00:00:18.320
+details.
+
+00:00:18.320 --> 00:00:23.159
+So I’m just going to be walking you through
+the changes that have already been made since
+
+00:00:23.159 --> 00:00:29.660
+they mostly involve adding some style references
+and html references along with our images.
+
+00:00:29.660 --> 00:00:36.480
+You’ll be able to find both the updated
+code as well as the raw html e-commerce files
+
+00:00:36.480 --> 00:00:38.300
+in your lecture resources.
+
+00:00:38.300 --> 00:00:42.460
+I’m going to start off by editing our html
+file.
+
+00:00:42.460 --> 00:00:44.609
+So I’ll just open that up.
+
+00:00:44.609 --> 00:00:51.879
+And you can see in this file I’ve added
+a reference to some fonts as well as fontawesome.
+
+00:00:51.879 --> 00:00:57.510
+We’ll be using fontawesome to add in some
+icons in certain places.
+
+00:00:57.510 --> 00:01:01.629
+And one of the first places we use it is to
+add in a spinner.
+
+00:01:01.629 --> 00:01:06.270
+I’ve removed the text ‘loading’ when
+our app is initially loaded, and instead we’ll
+
+00:01:06.270 --> 00:01:08.670
+just display a spinner.
+
+00:01:08.670 --> 00:01:15.040
+And I’ve edited our package.json down here
+to include a reference to font-awesome.
+
+00:01:15.040 --> 00:01:22.190
+So by including this font-awesome reference I can navigate into my
+terminal and type ‘npm install’ and its
+
+00:01:22.190 --> 00:01:27.020
+going to download this font-awesome library into our node_modules.
+
+00:01:27.020 --> 00:01:30.810
+Which you can see righ there.
+
+00:01:30.810 --> 00:01:35.360
+The next thing is I’ve added some images
+into our assets folder.
+
+00:01:35.360 --> 00:01:39.970
+So inside of our images I’ve added a bunch
+of our books that will show up.
+
+00:01:39.970 --> 00:01:44.070
+And I’ve also added a folder for fonts for
+our glyphicons.
+
+00:01:44.070 --> 00:01:47.890
+Additionally, I’ve added a books folder.
+
+00:01:47.890 --> 00:01:53.750
+This books folder is going to have a books-details
+folder and a books-list folder.
+
+00:01:53.750 --> 00:01:58.420
+The books-list folder currently contains a
+books-list typescript file and a books-list
+
+00:01:58.420 --> 00:01:59.420
+html file.
+
+00:01:59.420 --> 00:02:01.590
+The typescript file is empty.
+
+00:02:01.590 --> 00:02:06.390
+And the html file is going to hold a list
+of our products.
+
+00:02:06.390 --> 00:02:08.759
+This is what will appear on the main page.
+
+00:02:08.759 --> 00:02:16.520
+On the books-details we have an empty component
+and the same thing we have an html page that
+
+00:02:16.520 --> 00:02:18.870
+will contain the html.
+
+00:02:18.870 --> 00:02:20.890
+Right now, both these files are hard-coded.
+
+00:02:20.890 --> 00:02:26.030
+We’ll change that as we progress.
+
+00:02:26.030 --> 00:02:32.280
+Inside of our styles.css file I’ve included
+some styling that’s going to overwrite the
+
+00:02:32.280 --> 00:02:33.740
+bootstrap styling.
+
+00:02:33.740 --> 00:02:40.560
+So now, the last thing I want to do together
+is within our app.component file I’m going
+
+00:02:40.560 --> 00:02:43.150
+to add the header navbar area.
+
+00:02:43.150 --> 00:02:50.840
+What we’ll do is add in this navbar area,
+and then below that we’re going to nest
+
+00:02:50.840 --> 00:02:54.610
+components to display our content.
+
+00:02:54.610 --> 00:02:58.350
+I’ll add a new file into my app folder.
+
+00:02:58.350 --> 00:03:05.040
+And we’ll call this app.component.html.
+
+00:03:05.040 --> 00:03:07.200
+And then I’m going to paste in our code
+here.
+
+00:03:07.200 --> 00:03:11.459
+This is the header navbar code.
+
+00:03:11.459 --> 00:03:14.530
+Then save that.
+
+00:03:14.530 --> 00:03:20.140
+Then all we need to do is edit our component
+typescript file and reference this component
+
+00:03:20.140 --> 00:03:21.700
+html.
+
+00:03:21.700 --> 00:03:28.180
+So I’ll change this to be templateUrl.
+
+00:03:28.180 --> 00:03:34.940
+And I’ll change our backticks to quotes,
+then just reference the file which is app.component.html.
+
+00:03:34.940 --> 00:03:47.720
+If we’re referencing our template then we
+also have to reference our moduleId as module.id.
+
+00:03:47.720 --> 00:03:50.440
+Now I’ll save that file.
+
+00:03:50.440 --> 00:03:57.770
+And I’m going to remove the welcome folder
+since we’re not using it anymore.
+
+00:03:57.770 --> 00:04:05.300
+The last thing we need to do is open up our
+app.module.ts file and remove the WelcomeComponent
+
+00:04:05.300 --> 00:04:08.020
+import.
+
+00:04:08.020 --> 00:04:13.600
+We’ll get rid of that.
+
+00:04:13.600 --> 00:04:16.470
+And now lets go ahead and restart our server.
+
+00:04:16.470 --> 00:04:26.680
+Ok, so that’s all that I wanted to do in
+this lecture was update our code to include
+
+00:04:26.680 --> 00:04:28.389
+some new HTML files.
+
+00:04:28.389 --> 00:04:33.710
+In the next section, we’ll discuss in detail
+how to use angular data binding.
+

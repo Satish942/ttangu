@@ -1,0 +1,156 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.130 --> 00:00:06.500
+In this video we’ll explore what built-in
+pipes are and how we can use them inside our
+
+00:00:06.500 --> 00:00:08.550
+application.
+
+00:00:08.550 --> 00:00:14.290
+Angular provides us with some built-in pipes
+that we can easily use inside of our templates.
+
+00:00:14.290 --> 00:00:21.779
+These include: uppercase, lowercase, decimal,
+currency, date and JSON.
+
+00:00:21.779 --> 00:00:24.560
+Using pipes in our app is pretty easy.
+
+00:00:24.560 --> 00:00:30.849
+All we need to is add this pipe character
+inside of our curly braces and then specify
+
+00:00:30.849 --> 00:00:34.070
+what type of pipe we want to use.
+
+00:00:34.070 --> 00:00:39.610
+In this example, we’re using the uppercase
+pipe that will then transform our data into
+
+00:00:39.610 --> 00:00:44.150
+all capital letters when displayed in our
+HTML layout.
+
+00:00:44.150 --> 00:00:50.580
+Lets now explore how to use a few of these
+pipes inside of our application.
+
+00:00:50.580 --> 00:00:56.780
+Opening our DevBooks folder I’ll open up
+the BooksList component and make a few adjustments
+
+00:00:56.780 --> 00:00:58.310
+to our books array.
+
+00:00:58.310 --> 00:01:05.819
+I’m going to change the price property here
+to display a number, add then add a publishedOn
+
+00:01:05.819 --> 00:01:08.820
+property equaling a new date.
+
+00:01:08.820 --> 00:01:12.259
+This Date object is native to javascript.
+
+00:01:12.259 --> 00:01:20.179
+I’m also going to add an inStock property
+and set it equal to yes.
+
+00:01:20.179 --> 00:01:25.159
+Now lets edit our books-list html file.
+
+00:01:25.159 --> 00:01:27.320
+Now lets start using our builtin pipes.
+
+00:01:27.320 --> 00:01:34.020
+I’ll start off by adding a pipe next to
+this book.price and then use our currency
+
+00:01:34.020 --> 00:01:35.289
+pipe.
+
+00:01:35.289 --> 00:01:39.990
+With this pipe we do need to add an additional
+property indicating what kind of currency
+
+00:01:39.990 --> 00:01:45.840
+to use, to do that we’ll add a colon then
+specify USD.
+
+00:01:45.840 --> 00:01:50.539
+In order to display a dollar sign we need
+to add another parameter that’s a boolean.
+
+00:01:50.539 --> 00:01:54.609
+The default is set to False, meaning do not
+show a symbol.
+
+00:01:54.609 --> 00:01:58.090
+We can change that default by setting it to
+‘true’.
+
+00:01:58.090 --> 00:02:05.950
+Next, lets add a pipe to format our publishedOn
+property.
+
+00:02:05.950 --> 00:02:10.900
+To do that, we’ll first specify that we
+want to use the date pipe.
+
+00:02:10.900 --> 00:02:14.390
+And then we’re going to set it to longDate.
+
+00:02:14.390 --> 00:02:20.830
+And you have different options here when using
+this date pipe, you can set it equal to longDate,
+
+00:02:20.830 --> 00:02:26.480
+shortDate, shortTime, longTime, year as well
+as a few others.
+
+00:02:26.480 --> 00:02:32.390
+To find out more about these different pipe
+options you can always google ‘angular 2
+
+00:02:32.390 --> 00:02:39.020
+date pipes’ then you can click here on this
+angular.io link and then right here you’ll
+
+00:02:39.020 --> 00:02:42.510
+be presented with the different options you
+have.
+
+00:02:42.510 --> 00:02:47.980
+I’m also going to use a pipe to make my
+inStock property uppercase.
+
+00:02:47.980 --> 00:02:52.980
+So I’ll go ahead and add my pipe character
+in here, then specify that I want to use the
+
+00:02:52.980 --> 00:02:58.650
+uppercase pipe which is going to capitalize
+the yes string that we’ve defined.
+
+00:02:58.650 --> 00:03:04.000
+Lets save that and head over to our app and
+here you can see that our newly added pipes
+
+00:03:04.000 --> 00:03:07.040
+are working properly.
+
+00:03:07.040 --> 00:03:13.890
+If instead we wanted to display Euro dollars
+instead of US dollars we can just change USD
+
+00:03:13.890 --> 00:03:21.370
+to EUR save, refresh our app, and we can see
+that the change has been updated within our
+
+00:03:21.370 --> 00:03:22.030
+application.
+

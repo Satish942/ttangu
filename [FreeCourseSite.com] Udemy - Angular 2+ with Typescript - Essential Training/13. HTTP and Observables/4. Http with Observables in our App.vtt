@@ -1,0 +1,245 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.160 --> 00:00:03.860
+Here we are back in our application.
+
+00:00:03.860 --> 00:00:06.540
+Lets open the BookService file.
+
+00:00:06.540 --> 00:00:09.450
+Here you can see we’ve hardcoded some books.
+
+00:00:09.450 --> 00:00:16.160
+What we want to do instead is grab all the
+books located in our books.json file here.
+
+00:00:16.160 --> 00:00:20.630
+Quick note here, please make sure download
+the separate books.json file located in the
+
+00:00:20.630 --> 00:00:25.179
+resources folder and add it here.
+
+00:00:25.179 --> 00:00:30.750
+The first thing we’ll do is import http
+from angular/http.
+
+00:00:30.750 --> 00:00:36.960
+Next we’ll open up the app.module file and
+import HttpModule and then add it to our list
+
+00:00:36.960 --> 00:00:37.960
+of imports.
+
+00:00:37.960 --> 00:00:44.760
+And I’ll also make sure to import Observable
+from rxjs as well.
+
+00:00:44.760 --> 00:00:49.520
+The first thing I’ll do here is inside the
+constructor and we’ll include a private
+
+00:00:49.520 --> 00:00:55.579
+variable of underscore http assigned to the
+Http instance.
+
+00:00:55.579 --> 00:01:02.620
+I’ll change this IBook declaration to be
+an Observable array of type IBook.
+
+00:01:02.620 --> 00:01:05.550
+Then remove the hardcoded data.
+
+00:01:05.550 --> 00:01:09.750
+Then I can say return dot this _http.
+
+00:01:09.750 --> 00:01:16.110
+Referencing our variable, then dot get and
+pass in the location of our file in relation
+
+00:01:16.110 --> 00:01:18.320
+to our index.html file.
+
+00:01:18.320 --> 00:01:22.910
+So its located api/books/books.json.
+
+00:01:22.910 --> 00:01:27.330
+Then we need to format the data a little before
+giving it to the component.
+
+00:01:27.330 --> 00:01:33.580
+To do so, we’ll use the map operator, so
+we’ll say dot map – and here we need to
+
+00:01:33.580 --> 00:01:39.100
+actually import map from rxjs in order to
+use this method.
+
+00:01:39.100 --> 00:01:42.990
+So we’ll add an import statement for the
+method above.
+
+00:01:42.990 --> 00:01:46.400
+And then down below we pass in a parameter
+representing the data.
+
+00:01:46.400 --> 00:01:48.680
+So we’ll say response.
+
+00:01:48.680 --> 00:01:52.860
+Now we ask the question what is the Type of
+this response?
+
+00:01:52.860 --> 00:01:57.270
+Since we’re getting back more then just
+the data, for example we’re also getting
+
+00:01:57.270 --> 00:02:02.380
+header information along with the status,
+we should use Angular’s built-in Response
+
+00:02:02.380 --> 00:02:08.030
+interface, which is located in the same folder
+as Http.
+
+00:02:08.030 --> 00:02:14.500
+Then we take our response, make sure its turned
+into JSON and is of type IBook.
+
+00:02:14.500 --> 00:02:19.750
+So this is all we need to do in order to retrieve
+data and pass it along to our component.
+
+00:02:19.750 --> 00:02:24.420
+We will be adding some error handling here
+in the next lecture but first, lets see how
+
+00:02:24.420 --> 00:02:27.520
+to see display this data in our component.
+
+00:02:27.520 --> 00:02:29.900
+Opening up our books-list component file.
+
+00:02:29.900 --> 00:02:33.320
+I’ll first remove our call to getBooks from
+the constructor.
+
+00:02:33.320 --> 00:02:37.640
+Now, I want the data to appear as the page
+is loaded.
+
+00:02:37.640 --> 00:02:43.800
+The convention is to put service related logic
+inside of the ngOnInit lifecycle hook.
+
+00:02:43.800 --> 00:02:51.150
+So we’ll first add OnInit after Component,
+then say BooksListComponent implements OnInit.
+
+00:02:51.150 --> 00:02:55.250
+And add the ngOnInit hook after our constructor.
+
+00:02:55.250 --> 00:03:00.960
+I’m going to add inside of these curly’s
+a method to getBooks that will be defined
+
+00:03:00.960 --> 00:03:02.260
+below.
+
+00:03:02.260 --> 00:03:05.740
+Then we’ll create our method called getBooks.
+
+00:03:05.740 --> 00:03:11.660
+This method will then call the getBooks method
+on bookService to retrieve all the books from
+
+00:03:11.660 --> 00:03:13.380
+our JSON file.
+
+00:03:13.380 --> 00:03:17.380
+If all these ‘getBooks’ are confusing,
+you can name this something different like
+
+00:03:17.380 --> 00:03:24.350
+getAllBooks, but I’m just going to leave
+it as getBooks for now.
+
+00:03:24.350 --> 00:03:30.880
+And the last step here is we need to subscribe
+to Observable using dot subscribe.
+
+00:03:30.880 --> 00:03:34.400
+Then passing in a parameter that represents
+the data we get back.
+
+00:03:34.400 --> 00:03:40.040
+The name here can be anything you want, but
+in this case we’ll say books then arrow
+
+00:03:40.040 --> 00:03:44.600
+function, this.books equals books.
+
+00:03:44.600 --> 00:03:49.819
+This might look weird also, but all we’re
+doing is taking the response and setting it
+
+00:03:49.819 --> 00:03:53.250
+equal to our books property right here.
+
+00:03:53.250 --> 00:03:58.250
+This would work the same if we changed books
+to response.
+
+00:03:58.250 --> 00:04:05.540
+Lastly, we need to add another parameter to
+subscribe in case there is an error.
+
+00:04:05.540 --> 00:04:13.790
+So we’ll say error then arrow function this.errorMessage
+equals an error of type any.
+
+00:04:13.790 --> 00:04:17.900
+Then set up a property of errorMessage to
+type string.
+
+00:04:17.900 --> 00:04:24.030
+Now, lets load up our app and see the results
+so far.
+
+00:04:24.030 --> 00:04:29.510
+So we’re now looping through each one of
+the books in our API and that’s good, but
+
+00:04:29.510 --> 00:04:30.900
+it looks pretty broke.
+
+00:04:30.900 --> 00:04:34.680
+There’s 2 thing we need to do to fix this.
+
+00:04:34.680 --> 00:04:39.520
+First we need to change the properties in
+our IBook interface file to reflect that of
+
+00:04:39.520 --> 00:04:41.060
+our API.
+
+00:04:41.060 --> 00:04:44.210
+You can copy this over now or just download
+the file.
+
+00:04:44.210 --> 00:04:51.310
+And second, we need to edit our booksList
+HTML file to reflect the properties of our
+
+00:04:51.310 --> 00:04:52.740
+API.
+
+00:04:52.740 --> 00:04:56.160
+See if you can make the correct changes here
+yourself.
+
+00:04:56.160 --> 00:04:58.600
+The answer will be in the next video.
+

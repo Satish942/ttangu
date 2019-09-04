@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.650 --> 00:00:06.250
+In the previous section you learned how to
+setup a new angular project.
+
+00:00:06.250 --> 00:00:13.059
+While doing this, we used NgModule to assist
+in setting up and managing our application.
+
+00:00:13.059 --> 00:00:18.830
+In this section we’ll be discussing NgModule
+in depth so that you better understand this
+
+00:00:18.830 --> 00:00:19.970
+core utility.
+
+00:00:19.970 --> 00:00:27.090
+We’ll start off with an overview of NgModule
+decorator class and what goes inside of it.
+
+00:00:27.090 --> 00:00:33.770
+Then we’ll learn how we use NgModule to
+load up all our components, pipes and services
+
+00:00:33.770 --> 00:00:36.970
+that are used throughout our application.
+
+00:00:36.970 --> 00:00:43.040
+And finally, we’ll see how our application
+is bootstrapped and launched using NgModule
+
+00:00:43.040 --> 00:00:44.870
+and our root module file.
+

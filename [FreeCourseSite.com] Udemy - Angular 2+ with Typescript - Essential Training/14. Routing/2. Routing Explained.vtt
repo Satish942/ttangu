@@ -1,0 +1,117 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.150 --> 00:00:05.780
+There’s 4 steps that we need to take in
+order to setup routing in our app.
+
+00:00:05.780 --> 00:00:11.139
+First, we need a base href tag added to our
+index.html page.
+
+00:00:11.139 --> 00:00:16.369
+Second, we need to import the RouterModule
+to our app.module file.
+
+00:00:16.369 --> 00:00:20.730
+Then inside our imports array, we define the
+paths of our routes.
+
+00:00:20.730 --> 00:00:26.220
+And finally, we need to add the directive
+router-outlet where we want our components
+
+00:00:26.220 --> 00:00:27.689
+displayed.
+
+00:00:27.689 --> 00:00:29.440
+So this is what it will look like.
+
+00:00:29.440 --> 00:00:35.160
+In the index file we’ll add a base href
+equaling a backslash, signifying we want the
+
+00:00:35.160 --> 00:00:38.680
+root of our application to be at the index.
+
+00:00:38.680 --> 00:00:45.350
+Then inside our app module file, we’ll import
+RouterModule from angular/router.
+
+00:00:45.350 --> 00:00:51.210
+Inside our imports array is where we’ll
+add our RouterModule and attach the forRoot
+
+00:00:51.210 --> 00:00:52.210
+method.
+
+00:00:52.210 --> 00:00:56.410
+This method takes an array of objects that
+sets up our routing.
+
+00:00:56.410 --> 00:01:01.110
+This first path sets the location of books
+and uses the BooksListComponent.
+
+00:01:01.110 --> 00:01:07.360
+So the location of this route in our sample
+app will be localhost:3000/books.
+
+00:01:07.360 --> 00:01:15.470
+Next, we have the path of an empty string
+with a redirectTo set to books.
+
+00:01:15.470 --> 00:01:22.470
+So when a user first navigates to our application
+we want to redirect them to the books route.
+
+00:01:22.470 --> 00:01:26.920
+We also need to include this pathMatch property
+anytime we’re using a redirect.
+
+00:01:26.920 --> 00:01:28.470
+This will tell the router how to match a URL
+to the path of a route.
+
+00:01:28.470 --> 00:01:33.380
+And below that we have these two asterisks
+that represent a wildcard.
+
+00:01:33.380 --> 00:01:39.340
+We use wildcards like to this to say in the
+event a route is not found, redirect the user
+
+00:01:39.340 --> 00:01:40.880
+somewhere else.
+
+00:01:40.880 --> 00:01:45.170
+This is going to typically be a place for
+you to put your 404 page.
+
+00:01:45.170 --> 00:01:48.890
+But in our example, we’ll just send them
+back to our books route.
+
+00:01:48.890 --> 00:01:54.810
+In order to use our router we need to place
+the router outlet directive wherever we want
+
+00:01:54.810 --> 00:01:56.560
+our routes to appear.
+
+00:01:56.560 --> 00:02:01.920
+In our example we’re going to place the
+router-outlet in our app.component.html file
+
+00:02:01.920 --> 00:02:08.539
+so that it appears below our navigation menu
+and is going to replace the bs-books-list
+
+00:02:08.539 --> 00:02:10.269
+selector we’ve been using.
+
+00:02:10.269 --> 00:02:14.849
+Ok, so enough with the slides, lets work through
+this process in our application.
+

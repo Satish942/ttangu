@@ -1,0 +1,33 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.310 --> 00:00:05.140
+Hello and welcome to the getting started section
+of this course.
+
+00:00:05.140 --> 00:00:08.059
+In this section you will learn what is Angular
+JS is.
+
+00:00:08.059 --> 00:00:13.410
+Then we’ll discuss why the decision was
+made for a version 2 of Angular which led
+
+00:00:13.410 --> 00:00:16.280
+to a complete re-write of the code base.
+
+00:00:16.280 --> 00:00:21.880
+Then we’ll discuss the different coding
+options we have to write our Angular 2 code.
+
+00:00:21.880 --> 00:00:24.929
+This will lead us into a discussion of Typescript.
+
+00:00:24.929 --> 00:00:30.599
+And we’ll highlight why typescript was such
+a fantastic language choice for coding Angular
+
+00:00:30.599 --> 00:00:31.869
+2 applications.
+

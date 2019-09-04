@@ -1,0 +1,69 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.329 --> 00:00:06.250
+The next type of binding we need to talk about
+is that of 2-way binding.
+
+00:00:06.250 --> 00:00:10.060
+When using 2-way binding our view is bound
+to our model.
+
+00:00:10.060 --> 00:00:15.710
+So that whenever any changes are to the view
+they are reflected back to the user.
+
+00:00:15.710 --> 00:00:21.580
+You’ll see this commonly used in input boxes
+as well as in form fields.
+
+00:00:21.580 --> 00:00:28.970
+2-way binding is achieved by enclosing a special
+directive called ngModel in both square brackets
+
+00:00:28.970 --> 00:00:30.810
+and parenthesis.
+
+00:00:30.810 --> 00:00:36.510
+The square brackets are used to indicate property
+binding from the class property to the view
+
+00:00:36.510 --> 00:00:37.510
+element.
+
+00:00:37.510 --> 00:00:44.370
+And the parenthesis are used to send a notification
+back to the class property that the user has
+
+00:00:44.370 --> 00:00:46.480
+entered some data.
+
+00:00:46.480 --> 00:00:49.330
+This is sometimes referred to as a Banana
+in a Box.
+
+00:00:49.330 --> 00:00:53.360
+Since that’s kinda what it looks like.
+
+00:00:53.360 --> 00:00:56.750
+2-way binding uses the NgModel directive.
+
+00:00:56.750 --> 00:00:58.590
+This directive is part of the FormsModule.
+
+00:00:58.590 --> 00:01:05.860
+And as such, it is required for us to add
+the FormsModule to our appModule file as part
+
+00:01:05.860 --> 00:01:11.750
+of the imports array before we’re actually
+able to use NgModel within our application.
+
+00:01:11.750 --> 00:01:16.960
+Now that we’ve seen the steps involved within
+2-way binding, lets try this out inside of
+
+00:01:16.960 --> 00:01:17.490
+our app.
+

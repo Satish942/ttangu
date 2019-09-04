@@ -1,0 +1,73 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.299 --> 00:00:05.299
+Then I added 2 new files.
+
+00:00:05.299 --> 00:00:09.760
+A welcome.component.ts file and a welcome.component.html
+file.
+
+00:00:09.760 --> 00:00:14.340
+I added in the minimal amount of code needed
+to make this component functional.
+
+00:00:14.340 --> 00:00:19.779
+And I also omitted a selector because I know
+this component is going to be appearing inside
+
+00:00:19.779 --> 00:00:21.880
+our router-outlet.
+
+00:00:21.880 --> 00:00:27.759
+Inside of my corresponding html file I added
+a jumbotron which was taken from the bootstrap
+
+00:00:27.759 --> 00:00:30.919
+website and slightly modified the text.
+
+00:00:30.919 --> 00:00:34.930
+Along with the button in order to navigate
+to our books route.
+
+00:00:34.930 --> 00:00:43.379
+I then opened my app.module file and imported
+my new WelcomeComponent and added it to my
+
+00:00:43.379 --> 00:00:45.870
+list of declarations.
+
+00:00:45.870 --> 00:00:51.440
+Inside my imports I added a new route here
+with a path called welcome attaching to it
+
+00:00:51.440 --> 00:00:53.410
+my WelcomeComponent.
+
+00:00:53.410 --> 00:00:59.829
+I then modified my entry point and wildcard
+to redirect to my welcome route.
+
+00:00:59.829 --> 00:01:06.460
+Then inside my app.component html file, I
+set my Home link to use my router and sending
+
+00:01:06.460 --> 00:01:09.400
+the user to the welcome route.
+
+00:01:09.400 --> 00:01:14.660
+With our new routing setup we are now able
+to navigate from the welcome page to our books
+
+00:01:14.660 --> 00:01:16.800
+list page.
+
+00:01:16.800 --> 00:01:21.320
+So that does it for our basic routing setup,
+in the next lecture we’ll discuss how to
+
+00:01:21.320 --> 00:01:26.090
+send parameters to our route so that we can
+navigate to single book pages.
+

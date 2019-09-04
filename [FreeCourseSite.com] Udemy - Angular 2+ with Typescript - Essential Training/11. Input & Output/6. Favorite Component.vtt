@@ -1,0 +1,433 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.280 --> 00:00:05.800
+Now lets do something a little more interesting
+using our output and input events.
+
+00:00:05.800 --> 00:00:11.230
+In this video we’re going to use our already
+created favorite component to add some new
+
+00:00:11.230 --> 00:00:13.190
+functionality to our application.
+
+00:00:13.190 --> 00:00:20.160
+We’re going to add a heart icon that when
+hovered over displays the book title our row
+
+00:00:20.160 --> 00:00:25.820
+and when clicked on turns red and displays
+the message ‘the favorite of the book we’ve
+
+00:00:25.820 --> 00:00:30.660
+selected has been saved’.
+
+00:00:30.660 --> 00:00:34.609
+Back in our editor the first thing I’m going
+to do is add a new css class.
+
+00:00:34.609 --> 00:00:39.609
+In our styles.css class I’m going to open
+that up and I’m going to add a new selector
+
+00:00:39.609 --> 00:00:41.980
+named faveSelected.
+
+00:00:41.980 --> 00:00:47.250
+It’s going to turn our heart icon from black
+to red when its clicked.
+
+00:00:47.250 --> 00:00:50.069
+So we’ll say color red.
+
+00:00:50.069 --> 00:00:51.069
+Save that.
+
+00:00:51.069 --> 00:00:54.469
+Now, lets go into our favorites component.
+
+00:00:54.469 --> 00:00:58.550
+And we’re going to leave this input reviews
+here because its going to display the number
+
+00:00:58.550 --> 00:01:00.929
+of reviews next to our icon.
+
+00:01:00.929 --> 00:01:04.440
+I’m actually going to add one more of these.
+
+00:01:04.440 --> 00:01:10.080
+We’ll say @Input and this is going to be
+our favorite, so our favorite is going to
+
+00:01:10.080 --> 00:01:13.360
+hold the title of our book.
+
+00:01:13.360 --> 00:01:19.659
+We’ll change this notify and call it favoriteClicked.
+
+00:01:19.659 --> 00:01:25.350
+So when our favorite heart icon gets clicked
+this is going to send a message up into the
+
+00:01:25.350 --> 00:01:27.170
+parent.
+
+00:01:27.170 --> 00:01:33.190
+Now we’ll change the this.notify into our
+favoriteClicked – and we’ll change this
+
+00:01:33.190 --> 00:01:34.190
+message.
+
+00:01:34.190 --> 00:01:41.750
+The message we’re going to send is The favorite…
+and what we can do inside of string interpolation
+
+00:01:41.750 --> 00:01:43.920
+is grab variables.
+
+00:01:43.920 --> 00:01:51.210
+So, if we say $ then put in these curly braces,
+we’re able to grab this property.
+
+00:01:51.210 --> 00:01:56.329
+We can say this.favorite just like that, was
+saved.
+
+00:01:56.329 --> 00:02:03.780
+The one thing right here is these are apostrophies,
+and instead of apostrophies we need to use
+
+00:02:03.780 --> 00:02:07.320
+backticks, which is located at the upper left
+corner of your keyboard.
+
+00:02:07.320 --> 00:02:12.530
+So, I’m going to change those to backticks,
+and then you can see that this interpolation
+
+00:02:12.530 --> 00:02:13.810
+now has changed.
+
+00:02:13.810 --> 00:02:20.090
+We’re going to grab the book title, which
+is our favorite and display it right within
+
+00:02:20.090 --> 00:02:21.090
+the string message.
+
+00:02:21.090 --> 00:02:26.460
+I’m going to save that, and now lets open
+up our html file.
+
+00:02:26.460 --> 00:02:30.349
+And I’m going to add some new html here,
+so we’ll get rid of that.
+
+00:02:30.349 --> 00:02:34.760
+Lets make a new div and call this div fave.
+
+00:02:34.760 --> 00:02:37.790
+Then inside I’m going to make an h3 tag.
+
+00:02:37.790 --> 00:02:43.660
+This will say Add to Favorite the book that
+they selected.
+
+00:02:43.660 --> 00:02:46.769
+And here we’re going to add favicon icons.
+
+00:02:46.769 --> 00:02:51.430
+This is going to be i.fa.fa-heart.
+
+00:02:51.430 --> 00:02:54.900
+And its going to add our heart icon.
+
+00:02:54.900 --> 00:03:00.560
+Then next to our heart icon I’m also going
+to display our reviews.
+
+00:03:00.560 --> 00:03:02.250
+This is going to be from the input.
+
+00:03:02.250 --> 00:03:10.950
+We’ll add a little bit of space saying &amp;nbsp;
+and then reviews.
+
+00:03:10.950 --> 00:03:13.629
+Inside our div class is where we’ll add
+our trigger.
+
+00:03:13.629 --> 00:03:19.840
+So, we’ll do 2 things – first we’ll
+interpolate the reviews as the title, and
+
+00:03:19.840 --> 00:03:23.709
+this is going to appear when we hover over
+the heart icon.
+
+00:03:23.709 --> 00:03:26.629
+We’re going to set it equal to the favorite.
+
+00:03:26.629 --> 00:03:29.280
+So again, this is going to be the bookTitle.
+
+00:03:29.280 --> 00:03:35.420
+Then we’ll also add our click trigger, so
+on click we’re going to set it to the method
+
+00:03:35.420 --> 00:03:38.410
+that we created which was onClick.
+
+00:03:38.410 --> 00:03:43.540
+We’ll save that and now lets open up our
+books-list component file.
+
+00:03:43.540 --> 00:03:48.170
+Let’s get rid of this showMessage because
+we don’t need it anymore.
+
+00:03:48.170 --> 00:03:52.590
+And instead here I’m going to say favoriteMessage
+and this is what’s going to be displayed
+
+00:03:52.590 --> 00:03:55.870
+when the user clicks on our heart.
+
+00:03:55.870 --> 00:03:58.830
+And this is going to be a string and for now
+we’re going to set it to empty.
+
+00:03:58.830 --> 00:04:00.560
+Lets go down a little bit.
+
+00:04:00.560 --> 00:04:02.690
+We’ll get rid of this onNotifyClicked.
+
+00:04:02.690 --> 00:04:08.579
+I’m going to add one more book here just
+so we can see the difference when we’re
+
+00:04:08.579 --> 00:04:10.430
+clicking on one book vs the other.
+
+00:04:10.430 --> 00:04:14.290
+I’ll just copy this over, add a comma.
+
+00:04:14.290 --> 00:04:20.590
+We’ll change Tom to Mike, change to war
+and peace 3, and change the price.
+
+00:04:20.590 --> 00:04:27.020
+Change this around a little bit, say book
+reviews 18, and we’ll use the same image.
+
+00:04:27.020 --> 00:04:30.020
+Lets save this for now and go ahead and edit
+our html file.
+
+00:04:30.020 --> 00:04:36.940
+We’ll change showMessage here and instead
+just say favoriteMessage.
+
+00:04:36.940 --> 00:04:41.030
+Now I’m going to cut this out and paste
+it where it should be displayed.
+
+00:04:41.030 --> 00:04:44.150
+This is going to go at the bottom of our row.
+
+00:04:44.150 --> 00:04:52.789
+We’ll put it right below this booksInStock.
+
+00:04:52.789 --> 00:04:57.470
+First off, remember we’re still sending
+back our reviews, which is going to be displayed
+
+00:04:57.470 --> 00:05:02.200
+in the child html, and we can send back more
+then one thing.
+
+00:05:02.200 --> 00:05:05.310
+We’re also going to be sending back into
+our child the favorite.
+
+00:05:05.310 --> 00:05:10.150
+So we’ll say favorite and we’re going
+to set this equal to book.bookTitle to send
+
+00:05:10.150 --> 00:05:12.229
+back our title of the book.
+
+00:05:12.229 --> 00:05:17.539
+And instead of notify, we renamed this to
+favoriteClicked.
+
+00:05:17.539 --> 00:05:24.639
+Instead of onNotifyClicked we’re going to
+rename this to onFavoriteClicked.
+
+00:05:24.639 --> 00:05:29.580
+This is still going to contain an event parameter
+which is the message we received from the
+
+00:05:29.580 --> 00:05:31.100
+child.
+
+00:05:31.100 --> 00:05:34.850
+Now lets create this onFavoriteClicked method.
+
+00:05:34.850 --> 00:05:39.880
+I’ll put this right above our toggleImage
+method.
+
+00:05:39.880 --> 00:05:45.819
+onFavoriteClicked accepts a parameter that
+we’re going to name message is of type string
+
+00:05:45.819 --> 00:05:48.030
+and is not going to return anything.
+
+00:05:48.030 --> 00:05:52.930
+And then we’ll just set our favoriteMessage
+equal to the message.
+
+00:05:52.930 --> 00:05:58.300
+I’m going to hit save all and lets take
+a look at our application.
+
+00:05:58.300 --> 00:06:05.090
+Our new component stuff is right here, so
+if we click this we can see our message.
+
+00:06:05.090 --> 00:06:10.360
+Favorite war and peace 2 was saved, so its
+grabbing the title war and peace 2 and its
+
+00:06:10.360 --> 00:06:12.240
+displaying the message right here.
+
+00:06:12.240 --> 00:06:18.750
+If we click this other heart we get the message
+corresponding to the appropriate book.
+
+00:06:18.750 --> 00:06:22.819
+The last thing I want to show you is how to
+change the color of this heart.
+
+00:06:22.819 --> 00:06:28.100
+One way to do that is to use the ngClass,
+which we talked about in a previous section.
+
+00:06:28.100 --> 00:06:33.500
+There’s another way to do this which might
+be simpler and that is to use the class attribute
+
+00:06:33.500 --> 00:06:37.669
+in html and then add it to the i class right
+here.
+
+00:06:37.669 --> 00:06:40.410
+So I’ll just open up this ending div.
+
+00:06:40.410 --> 00:06:46.710
+What we can do is say class, then the name
+of the selector we want to use.
+
+00:06:46.710 --> 00:06:51.069
+We created a new selector called faveSelected.
+
+00:06:51.069 --> 00:06:55.360
+Then we can set it equal to a method that’s
+going to be of a boolean value.
+
+00:06:55.360 --> 00:07:01.610
+So, we’ll just say isSelected, and then
+we pass in the property we want to watch for.
+
+00:07:01.610 --> 00:07:03.410
+The property that we’ll create is called
+fave.
+
+00:07:03.410 --> 00:07:09.509
+When fave is set to true, the class faveSelected
+is going to show.
+
+00:07:09.509 --> 00:07:15.740
+When fave is set to false, this class of faveSelected
+will not show.
+
+00:07:15.740 --> 00:07:20.500
+The first thing we can do is we can create
+a new property called fave and set it to false,
+
+00:07:20.500 --> 00:07:24.100
+so we get the default coloring of our heart
+icon.
+
+00:07:24.100 --> 00:07:30.629
+I will create our new property of fave which
+is a boolean and its going to be set to default
+
+00:07:30.629 --> 00:07:33.300
+to false.
+
+00:07:33.300 --> 00:07:37.270
+Now when we click the icon, we’re going
+to set this to true.
+
+00:07:37.270 --> 00:07:42.009
+We can say this.fave is equal to true.
+
+00:07:42.009 --> 00:07:45.690
+And then we have to create the method for
+isSelected.
+
+00:07:45.690 --> 00:07:51.060
+We can say isSelected which takes the fave
+property which is of type boolean is going
+
+00:07:51.060 --> 00:07:53.129
+to return true or false.
+
+00:07:53.129 --> 00:08:02.289
+So we’ll say when fave is false or this.fave
+is false then return false.
+
+00:08:02.289 --> 00:08:07.770
+But if fave is true, then return true.
+
+00:08:07.770 --> 00:08:12.139
+And this was a mistake, this.fave we’re
+not going to set it to true because then we
+
+00:08:12.139 --> 00:08:13.610
+can reset it.
+
+00:08:13.610 --> 00:08:17.820
+So in order to reset it we’ll flip it, just
+like we did with the image.
+
+00:08:17.820 --> 00:08:20.180
+We’ll just say this dot not fave.
+
+00:08:20.180 --> 00:08:23.590
+This will toggle between true and false when
+clicked.
+
+00:08:23.590 --> 00:08:25.690
+Then save all.
+
+00:08:25.690 --> 00:08:32.450
+And lets open up our app, click this button,
+and now we get our heart turned red.
+
+00:08:32.450 --> 00:08:36.450
+And when we unclick it, turns back to black.
+
+00:08:36.450 --> 00:08:37.330
+And the same with the other one.
+

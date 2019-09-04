@@ -1,0 +1,60 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.189 --> 00:00:04.820
+Hello and welcome back to Angular 2 essential
+training.
+
+00:00:04.820 --> 00:00:09.440
+In this section we’ll be discussing HTTP
+and observables.
+
+00:00:09.440 --> 00:00:15.999
+HTTP is what we use whenever we want to retreive
+something from our database or an API.
+
+00:00:15.999 --> 00:00:20.280
+Not a lot has changed between angular 1 and
+angular 2 in this regard.
+
+00:00:20.280 --> 00:00:25.910
+We’re still using the keyword http in order
+to perform our requests.
+
+00:00:25.910 --> 00:00:29.180
+What has changed is how we handle the response.
+
+00:00:29.180 --> 00:00:34.030
+Angular 2 has made the switch to using RxJS
+observables.
+
+00:00:34.030 --> 00:00:39.999
+Observables essentially emit responses over
+time, instead of the response being a one
+
+00:00:39.999 --> 00:00:41.929
+time occurance.
+
+00:00:41.929 --> 00:00:48.309
+So we’ll first discuss what an Observable
+is and how it differs from a typical promise-based
+
+00:00:48.309 --> 00:00:49.309
+response.
+
+00:00:49.309 --> 00:00:52.920
+Then we’ll discuss how to perform Http requests.
+
+00:00:52.920 --> 00:00:59.839
+This will include performing an http GET request
+to retrieve our data, processing the response
+
+00:00:59.839 --> 00:01:05.290
+object as an Observable and then subscribing
+to the Observable in our component.
+
+00:01:05.290 --> 00:01:11.350
+We’ll be using our ngOnInit lifecycle hook
+in order to display our data.
+

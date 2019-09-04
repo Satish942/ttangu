@@ -1,0 +1,139 @@
+WEBVTT
+
+00:01.460 --> 00:02.990
+Hey guys welcome back.
+
+00:02.990 --> 00:05.600
+In this video we're going to fix our listings.
+
+00:05.600 --> 00:08.990
+So if you haven't tried to fix this yourself I recommend you give it a shot.
+
+00:09.230 --> 00:14.420
+Then once that's done we're going to add some error handling to our service and explore a few of the
+
+00:14.420 --> 00:16.340
+Ark's jazz operators.
+
+00:16.640 --> 00:20.600
+So right now our app is broke since we've added the service to our component.
+
+00:20.600 --> 00:24.040
+We haven't adjusted the HTL So let's do that now.
+
+00:24.110 --> 00:33.390
+The first thing I'll do is get rid of these other columns that contain the hard coded data.
+
+00:33.420 --> 00:35.980
+I'm going to keep this favorite message.
+
+00:36.360 --> 00:38.700
+We're still iterating over books and books.
+
+00:38.790 --> 00:44.670
+So I'll leave that as well but I am going to get rid of these two buttons that we won't be using anymore.
+
+00:45.080 --> 00:50.060
+So let's open up our bookstore Jaisalmer file so we can get a reference to our items.
+
+00:50.310 --> 00:53.670
+The image of our books is right here as well.
+
+00:53.670 --> 00:54.850
+So we'll change that.
+
+00:57.890 --> 00:59.060
+Instead of book price.
+
+00:59.060 --> 01:09.460
+It's just named price book title is called name book author is just author book description is simply
+
+01:09.460 --> 01:16.500
+description published on is now called release date.
+
+01:16.560 --> 01:22.920
+We're still using book in-stock but I've changed this to be a boolean in the Jaisalmer file.
+
+01:22.920 --> 01:26.390
+We can use something similar to the height image logic above.
+
+01:28.470 --> 01:34.680
+So I'll just copy that over and say that if the book is in stock meaning if it's set to true display
+
+01:34.680 --> 01:35.820
+the string yes.
+
+01:35.850 --> 01:37.640
+Otherwise no.
+
+01:37.650 --> 01:40.880
+Then instead of book reviews will say star rating.
+
+01:44.520 --> 01:50.610
+And then I'm going to get rid of this books in stock p elements and then fix this B-S favorite area
+
+01:50.610 --> 01:56.350
+to say book thoughts star rating and book name.
+
+01:56.360 --> 01:58.860
+Now let's save everything and see the results.
+
+01:59.910 --> 02:02.110
+OK looks pretty good.
+
+02:02.130 --> 02:05.980
+Let's now add some error handling to our service.
+
+02:06.010 --> 02:11.350
+Right now we're just sending back the data from our API endpoint but not doing anything in the event
+
+02:11.350 --> 02:18.380
+the file isn't found or something misfires so I'll open up my book service file and first create a private
+
+02:18.440 --> 02:20.900
+error handling method name to handle error
+
+02:28.950 --> 02:33.300
+or create a variable here in a message that's going to display our error message
+
+02:39.830 --> 02:42.800
+and then I could return the observable attaching to it.
+
+02:42.800 --> 02:48.160
+The throw method passing in our message we're using a new.
+
+02:48.180 --> 02:50.810
+Our exchange operator here called throe.
+
+02:50.820 --> 02:51.930
+So we need to import it
+
+02:54.740 --> 02:57.080
+instead of listing these operators individually.
+
+02:57.080 --> 03:04.530
+We could import the entire Our access library like this but this is actually not recommended since our
+
+03:04.530 --> 03:09.400
+XT is a big library and we don't need everything in there.
+
+03:09.410 --> 03:15.440
+Now let's add it or get books method to include the air handling below.
+
+03:15.810 --> 03:22.230
+We can first change the method do which will allow us to log a message after the data has been received
+
+03:25.020 --> 03:32.040
+and then also add the catch method passing in this thought handle error in the event an error is received
+
+03:33.360 --> 03:36.690
+and will make sure to import these two new operators up above
+
+03:40.350 --> 03:44.950
+and then let's just break our API call by adding an extra As to the end of our End Point.
+
+03:47.790 --> 03:53.280
+And now on refresh we get a nice descriptive error message alerting us of the problem with the response
+
+03:53.280 --> 03:53.810
+object.

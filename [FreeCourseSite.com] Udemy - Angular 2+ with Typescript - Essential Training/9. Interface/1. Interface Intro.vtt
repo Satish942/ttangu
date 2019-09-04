@@ -1,0 +1,23 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.490 --> 00:00:05.779
+In this section we’re going to be talking
+about Interfaces in Typescript.
+
+00:00:05.779 --> 00:00:12.230
+We’ll start off with a definition of what
+interfaces are and explore why they are used.
+
+00:00:12.230 --> 00:00:16.880
+We’ll then work through a few different
+examples and explore the different ways we
+
+00:00:16.880 --> 00:00:20.279
+can go about implementing an interface.
+
+00:00:20.279 --> 00:00:25.320
+And then we’ll create and use a Book interface
+in our existing application.
+

@@ -1,0 +1,159 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.140 --> 00:00:05.279
+Hello and welcome to this lesson on routing
+to a single book.
+
+00:00:05.279 --> 00:00:09.850
+Right now we’re able to navigate back and
+forth between our home page and our all books
+
+00:00:09.850 --> 00:00:14.850
+page, but not yet to a specified book, so
+lets fix that.
+
+00:00:14.850 --> 00:00:20.949
+What we want to do is create a new route path
+that will pass a parameter to our route handler
+
+00:00:20.949 --> 00:00:22.990
+indicating where we want to go.
+
+00:00:22.990 --> 00:00:29.410
+This can be accomplished by first specifiying
+a new path with a backslash colon id.
+
+00:00:29.410 --> 00:00:35.109
+This id is a variable and it can be anything
+so long as your consistent but the convention
+
+00:00:35.109 --> 00:00:37.540
+is to use the keyword id.
+
+00:00:37.540 --> 00:00:42.769
+And then we declare which component is going
+to be associated to the new route.
+
+00:00:42.769 --> 00:00:48.469
+In order to activate this route, we need to
+pass an array to our routerLink.
+
+00:00:48.469 --> 00:00:54.660
+The first index in our array indicates a route
+location, so here we’re saying look for
+
+00:00:54.660 --> 00:01:00.730
+the route prefixed with book, and the 2nd
+element passes in a reference to the book
+
+00:01:00.730 --> 00:01:02.230
+we want look at.
+
+00:01:02.230 --> 00:01:07.000
+In this template we’re looping through and
+displaying all the books as defined in our
+
+00:01:07.000 --> 00:01:08.520
+json file.
+
+00:01:08.520 --> 00:01:15.100
+So this id references a book in that json
+object, right here – so depending on which
+
+00:01:15.100 --> 00:01:22.970
+book we click on we’ll navigate to the URL
+of book slash 1, 2, 3 and so on.
+
+00:01:22.970 --> 00:01:29.549
+Doing just this much is going to populate
+the url with the id of the book we’re clicking
+
+00:01:29.549 --> 00:01:35.560
+on, but isn’t going to display any data
+for the individual book.
+
+00:01:35.560 --> 00:01:38.829
+But for now, lets work through this step in
+our application.
+
+00:01:38.829 --> 00:01:49.490
+First, I’m going to open up our app module
+file and add in a new route located book/:id
+
+00:01:49.490 --> 00:01:53.000
+with a component called BookDetailsComponent.
+
+00:01:53.000 --> 00:01:58.380
+We get an error here because we haven’t
+created it yet, so lets do that now by opening
+
+00:01:58.380 --> 00:02:04.859
+our book-details folder then inside that open
+up the book-details component file.
+
+00:02:04.859 --> 00:02:09.789
+Here, we’ll add in the minimum needed code
+to create a component.
+
+00:02:09.789 --> 00:02:17.780
+Which includes a module id, a templateURL
+and the name of our component.
+
+00:02:17.780 --> 00:02:24.739
+We’ll make sure to add our new component
+to our app module file as well.
+
+00:02:24.739 --> 00:02:30.680
+Now, lets edit our books-list html file.
+
+00:02:30.680 --> 00:02:38.680
+We’re going to edit this a tag to turn our
+href into a routerLink and then bind it to
+
+00:02:38.680 --> 00:02:42.220
+an array of 2 elements.
+
+00:02:42.220 --> 00:02:48.760
+Make sure your using quotation marks around
+both the array itself and the first element
+
+00:02:48.760 --> 00:02:51.330
+which contains a route location.
+
+00:02:51.330 --> 00:02:55.409
+With the 2nd element containing a reference
+to the book’s id.
+
+00:02:55.409 --> 00:02:59.409
+We’ll save that and check out our app.
+
+00:02:59.409 --> 00:03:06.200
+So now when we navigate and click on the name
+of a book, we’re sent to a URL containing
+
+00:03:06.200 --> 00:03:09.769
+the ID of the book we clicked on.
+
+00:03:09.769 --> 00:03:14.709
+And this template we’re displaying is what’s
+been provided to you as hardcoded html and
+
+00:03:14.709 --> 00:03:16.120
+looks like this.
+
+00:03:16.120 --> 00:03:21.569
+If you don’t see an image show up, make
+sure to edit this path right here to match
+
+00:03:21.569 --> 00:03:22.819
+our folder structure.
+
+00:03:22.819 --> 00:03:27.392
+In the next video we’ll refactor our HTML
+file and add to our bookDetails component
+
+00:03:27.392 --> 00:03:29.120
+to display our data dynamically.
+

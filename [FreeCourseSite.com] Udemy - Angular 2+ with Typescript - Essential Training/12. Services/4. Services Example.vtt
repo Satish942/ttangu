@@ -1,0 +1,156 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.870 --> 00:00:03.420
+Now we’re back here in our app.
+
+00:00:03.420 --> 00:00:09.790
+And we’re going to be using the Book interface
+in this example, so lets open up book.ts and
+
+00:00:09.790 --> 00:00:11.690
+make a few changes.
+
+00:00:11.690 --> 00:00:15.620
+These properties right here reflect our API,
+for this example
+
+00:00:15.620 --> 00:00:19.390
+I want to use properties that match what’s
+currently being displayed.
+
+00:00:19.390 --> 00:00:22.050
+So I’ll comment this out for now.
+
+00:00:22.050 --> 00:00:28.930
+And then add in these new properties for use
+in our service.
+
+00:00:28.930 --> 00:00:32.770
+Now I’m now going to add a new file called
+book.service.ts.
+
+00:00:32.770 --> 00:00:41.690
+I’ll start by exporting a class of BookService.
+
+00:00:41.690 --> 00:00:44.519
+Now I need to add in my imports.
+
+00:00:44.519 --> 00:00:48.859
+First will be Injectable from angular core.
+
+00:00:48.859 --> 00:00:53.789
+Then Http from angular dash http.
+
+00:00:53.789 --> 00:00:57.409
+And also import my Book Interface.
+
+00:00:57.409 --> 00:01:02.850
+Above my class definition I need to add my
+Injectable decorator.
+
+00:01:02.850 --> 00:01:09.210
+Then inside of my class I’m going to create
+a method called getBooks which is of type
+
+00:01:09.210 --> 00:01:12.700
+IBook for our interface.
+
+00:01:12.700 --> 00:01:16.620
+Then I’m going to return an array of books.
+
+00:01:16.620 --> 00:01:22.820
+And this array is going to the same array
+that we hardcoded into our books-list component
+
+00:01:22.820 --> 00:01:23.820
+file.
+
+00:01:23.820 --> 00:01:30.970
+So I’ll just copy from there and paste it
+into our service.
+
+00:01:30.970 --> 00:01:37.020
+We need to make sure we register our serivce
+as a provider in our app.module file.
+
+00:01:37.020 --> 00:01:44.140
+So we’ll go into that file, import our BookService
+from its location.
+
+00:01:44.140 --> 00:01:51.590
+Then add key of providers to our NgModule
+that defines an array and currently just holds
+
+00:01:51.590 --> 00:01:53.420
+our bookService.
+
+00:01:53.420 --> 00:01:57.710
+Now we’re ready to use our service inside
+our component.
+
+00:01:57.710 --> 00:02:08.600
+Going back into our books-list component file
+I’ll start off my importing our service.
+
+00:02:08.600 --> 00:02:13.840
+Then I’m going to add a new property of
+books which is an array of type Ibook.
+
+00:02:13.840 --> 00:02:16.579
+So here we’ll be using the books as what
+was being used down below.
+
+00:02:16.579 --> 00:02:21.060
+Below that I’ll add my constructor.
+
+00:02:21.060 --> 00:02:28.030
+Inside the parenthesis I need to add a private
+variable of underscore bookService is of type
+
+00:02:28.030 --> 00:02:31.900
+BookService which we just imported.
+
+00:02:31.900 --> 00:02:37.790
+The convention whenever injecting services
+inside the constructor is to prefix the variable
+
+00:02:37.790 --> 00:02:40.530
+declaration with an underscore.
+
+00:02:40.530 --> 00:02:45.060
+Then inside of the curly brackets is where
+I’m going to set my books property equal
+
+00:02:45.060 --> 00:02:50.810
+to my bookService dot getBooks method.
+
+00:02:50.810 --> 00:02:55.790
+This is going to do the same thing as this
+code right here, so we’ll just comment it
+
+00:02:55.790 --> 00:02:57.280
+out for now.
+
+00:02:57.280 --> 00:03:02.760
+In future demonstrations we’re going to
+be using ngOnInit here as opposed to loading
+
+00:03:02.760 --> 00:03:05.200
+our data inside the constructor.
+
+00:03:05.200 --> 00:03:10.069
+This example is mainly is just to get you
+familiar with the constructor and how services
+
+00:03:10.069 --> 00:03:11.129
+work.
+
+00:03:11.129 --> 00:03:16.650
+So we’ll save all that, load up our app
+and you can see its working same as before
+
+00:03:16.650 --> 00:03:18.519
+with no errors, cool.
+

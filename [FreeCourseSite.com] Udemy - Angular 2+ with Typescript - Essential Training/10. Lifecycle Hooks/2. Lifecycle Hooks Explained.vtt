@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.740 --> 00:00:08.130
+To best understand what a component lifecycle
+hook is, lets open up the angular documentation
+
+00:00:08.130 --> 00:00:17.680
+and navigate over to developer guide and then
+we’ll click on lifecycle hooks.
+
+00:00:17.680 --> 00:00:23.449
+Angular defines lifecycle hooks as a lifecycle
+managed by Angular itself.
+
+00:00:23.449 --> 00:00:29.850
+Angular creates it, renders it, creates and
+renders its children, checks when its databound
+
+00:00:29.850 --> 00:00:34.250
+properties change, and destroys it before
+removing it from the DOM.
+
+00:00:34.250 --> 00:00:39.720
+Angular offers component lifecycle hooks that
+give us visibility into these key moments
+
+00:00:39.720 --> 00:00:42.990
+and the ability to act when they occur.
+
+00:00:42.990 --> 00:00:49.960
+So basically, angular creates our components,
+and then it builds the child components, then
+
+00:00:49.960 --> 00:00:53.900
+it watches for any changes made to our properties.
+
+00:00:53.900 --> 00:00:57.140
+And finally removes them from the DOM.
+
+00:00:57.140 --> 00:01:02.140
+Angular gives us access to each one of these
+points in time – and that’s what we’re
+
+00:01:02.140 --> 00:01:04.390
+using lifecycle hooks for.
+
+00:01:04.390 --> 00:01:11.270
+If we scroll down a bit under lifecycle sequence,
+here we can see the order angular uses for
+
+00:01:11.270 --> 00:01:12.750
+each one of these hooks.
+
+00:01:12.750 --> 00:01:19.880
+These first 2, ngOnChanges and ngOnInit are
+the ones that you’ll be seeing most commonly
+
+00:01:19.880 --> 00:01:23.679
+used inside of any angular applications.
+
+00:01:23.679 --> 00:01:29.149
+The others here are used before and after
+initializing child components.
+
+00:01:29.149 --> 00:01:36.060
+When using lifecycle hooks, we use OnInit
+to perform any component initialization after
+
+00:01:36.060 --> 00:01:39.289
+Angular has initialized the data bound properties.
+
+00:01:39.289 --> 00:01:46.319
+We’ll use OnChanges to perform some action
+when a databound input property value has
+
+00:01:46.319 --> 00:01:47.319
+changed.
+
+00:01:47.319 --> 00:01:53.819
+And you’ll also see OnDestroy being used
+to perform clean up within our components.
+
+00:01:53.819 --> 00:01:57.270
+Now lets take a look at how implement lifecycle
+hooks.
+
+00:01:57.270 --> 00:02:02.569
+I’m using the word implement here because
+these lifecycle hooks are all Interfaces.
+
+00:02:02.569 --> 00:02:06.889
+So when using any one of these hooks there
+are 3 steps.
+
+00:02:06.889 --> 00:02:10.369
+The first thing we do is we add in our hook
+name in our list of imports.
+
+00:02:10.369 --> 00:02:16.510
+And they’re are located in angular core
+library, so we can add a comma next to Component
+
+00:02:16.510 --> 00:02:20.210
+and then add our OnInit lifecycle hook in
+this example.
+
+00:02:20.210 --> 00:02:26.310
+Next, we need implement our hook just like
+we do any other interface by saying that our
+
+00:02:26.310 --> 00:02:31.280
+component class implements the hook of our
+choice, which in this case is OnInit.
+
+00:02:31.280 --> 00:02:40.110
+And finally, we can use ngOnInit method to
+perform some function within our class.
+
+00:02:40.110 --> 00:02:47.160
+And just to further clarify, OnInit is the
+name of our interface and ngOnInit is the
+
+00:02:47.160 --> 00:02:51.500
+name of a method that’s defined within the
+interface.
+
+00:02:51.500 --> 00:02:56.540
+Now lets go ahead and work through a few examples
+including each one of these lifecycle hooks
+
+00:02:56.540 --> 00:02:57.340
+in our application.
+

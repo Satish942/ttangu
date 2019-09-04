@@ -1,0 +1,126 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.240 --> 00:00:06.359
+In this video we’ll dig deep into understanding
+Observables.
+
+00:00:06.359 --> 00:00:13.249
+Observables are part of the reactive extensions
+library also known as RxJS and are used extensively
+
+00:00:13.249 --> 00:00:14.780
+in Angular 2.
+
+00:00:14.780 --> 00:00:19.920
+You can learn all about reactiveX here at
+reactivex.io.
+
+00:00:19.920 --> 00:00:26.570
+The purpose of reactiveX is to provide an
+API for asynchronous programming with observable
+
+00:00:26.570 --> 00:00:27.570
+streams.
+
+00:00:27.570 --> 00:00:29.920
+So what does that mean exactly?
+
+00:00:29.920 --> 00:00:35.560
+It means that observables provide us with
+an asynchronous stream of data we can subscribe
+
+00:00:35.560 --> 00:00:36.560
+to.
+
+00:00:36.560 --> 00:00:41.400
+So that when new data has been emitted we
+can automatically receive the new data coming
+
+00:00:41.400 --> 00:00:43.070
+in.
+
+00:00:43.070 --> 00:00:46.900
+You can think of this as receiving the changes
+in stock prices.
+
+00:00:46.900 --> 00:00:52.170
+Since the price of stocks is constantly fluctuating,
+an observable could be used to update these
+
+00:00:52.170 --> 00:00:54.710
+prices as they come in.
+
+00:00:54.710 --> 00:01:00.600
+Observables work like an array, so we’ll
+be using the map operator in order to process
+
+00:01:00.600 --> 00:01:01.600
+the response.
+
+00:01:01.600 --> 00:01:08.020
+To better understand this lets go over to
+reactivex.io then click ‘choose your platform’
+
+00:01:08.020 --> 00:01:09.970
+then javascript.
+
+00:01:09.970 --> 00:01:12.009
+We get taken to the github page.
+
+00:01:12.009 --> 00:01:15.710
+If we scroll down a bit we see an example.
+
+00:01:15.710 --> 00:01:18.850
+This is very similar to what our service will
+look like.
+
+00:01:18.850 --> 00:01:24.280
+So this source is going to be to the response
+we get back, like a JSON file for example.
+
+00:01:24.280 --> 00:01:28.679
+We can filter the response to match a selected
+criteria.
+
+00:01:28.679 --> 00:01:33.369
+Then we need to call map on the response in
+order to shape the data.
+
+00:01:33.369 --> 00:01:37.479
+Once the data is shaped, it gets passed to
+a subscriber.
+
+00:01:37.479 --> 00:01:43.259
+This subscriber is going to be located inside
+our component and will be used to display
+
+00:01:43.259 --> 00:01:47.740
+the data in our view and process any errors.
+
+00:01:47.740 --> 00:01:51.539
+So how is an observable different from a promise?
+
+00:01:51.539 --> 00:01:54.429
+Observables work with multiple values over
+time.
+
+00:01:54.429 --> 00:01:58.859
+Whereas promises return only a single value.
+
+00:01:58.859 --> 00:02:03.260
+Observables are cancellable, promises are
+not cancellable.
+
+00:02:03.260 --> 00:02:09.550
+Observables can be manipulated using javascript
+functions like map, filter and reduce.
+
+00:02:09.550 --> 00:02:14.320
+Now that we have a better understanding of
+what Observables are, lets discuss working
+
+00:02:14.320 --> 00:02:16.170
+with Http requests.
+

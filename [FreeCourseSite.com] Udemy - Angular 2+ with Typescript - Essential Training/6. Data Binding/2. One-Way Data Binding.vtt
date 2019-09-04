@@ -1,0 +1,64 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.090 --> 00:00:06.010
+The fist type of data binding we’ll discuss
+is that of 1-way binding.
+
+00:00:06.010 --> 00:00:11.210
+One way binding is handled using either interpolation
+or property binding.
+
+00:00:11.210 --> 00:00:17.340
+When using interpolation, we pass our class
+property into our template using the double
+
+00:00:17.340 --> 00:00:18.580
+curly braces.
+
+00:00:18.580 --> 00:00:24.140
+We’ve already explored this type of binding
+in our application when we bound our pageTitle
+
+00:00:24.140 --> 00:00:26.700
+property inside our template.
+
+00:00:26.700 --> 00:00:33.200
+We defined a string called Dev Book Store
+inside of our pageTitle property which then
+
+00:00:33.200 --> 00:00:36.210
+appeared inside of our template.
+
+00:00:36.210 --> 00:00:40.829
+We can also accomplish 1-way binding using
+property binding.
+
+00:00:40.829 --> 00:00:47.219
+When using property binding we use brackets
+around the element we want to bind to.
+
+00:00:47.219 --> 00:00:53.310
+Then we can define a property in our class
+that will contain the data we want to use.
+
+00:00:53.310 --> 00:00:58.180
+And we make sure to wrap the property element
+inside of quotation marks.
+
+00:00:58.180 --> 00:01:03.860
+In this example we’ve defined a class with
+a property of bookImageUrl.
+
+00:01:03.860 --> 00:01:09.090
+This matches a property that we’ve set up
+within our component, which then points to
+
+00:01:09.090 --> 00:01:12.470
+the location of an image file.
+
+00:01:12.470 --> 00:01:17.840
+Now that we’ve seen examples of 1-way binding,
+lets now use these inside of our application.
+

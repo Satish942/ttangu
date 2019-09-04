@@ -1,0 +1,118 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.500 --> 00:00:07.520
+In the previous video you learned how we setup
+our AppModule file that contains sitewide
+
+00:00:07.520 --> 00:00:09.929
+dependencies and components.
+
+00:00:09.929 --> 00:00:15.250
+In this video you’ll learn how we bootstrap
+our application which is the process of putting
+
+00:00:15.250 --> 00:00:20.480
+together the minimal pieces needed to run
+an Angular application.
+
+00:00:20.480 --> 00:00:28.210
+Once we’ve created our app.module.ts file,
+the next file we created was the main.ts file
+
+00:00:28.210 --> 00:00:29.869
+which looked like this.
+
+00:00:29.869 --> 00:00:37.390
+Here we are first importing platformBrowserDynamic
+to run our app in the browser as well as the
+
+00:00:37.390 --> 00:00:39.530
+AppModule class.
+
+00:00:39.530 --> 00:00:48.399
+Below that we define a constant variable platform
+which is set equal to an instance of the platformBrowserDynamic
+
+00:00:48.399 --> 00:00:49.500
+method.
+
+00:00:49.500 --> 00:00:56.420
+Then below that we use our platform constant
+dot bootstrapModule passing in our AppModule
+
+00:00:56.420 --> 00:00:57.610
+class.
+
+00:00:57.610 --> 00:01:04.290
+So the bootstrapModule is a method inside
+of platformBrowserDynamic that we can access
+
+00:01:04.290 --> 00:01:06.180
+using dot notation.
+
+00:01:06.180 --> 00:01:13.560
+This method accepts a parameter for the module
+we’re using which passes in our applications
+
+00:01:13.560 --> 00:01:14.560
+meta data.
+
+00:01:14.560 --> 00:01:20.350
+Remember, our AppModule class contains all
+of our initial application meta data which
+
+00:01:20.350 --> 00:01:24.700
+is expressed here inside of our NgModule decorator.
+
+00:01:24.700 --> 00:01:31.140
+And then this bootstrap key tells Angular
+that we want to use the AppComponent module
+
+00:01:31.140 --> 00:01:34.280
+as the root component for our site.
+
+00:01:34.280 --> 00:01:40.110
+So that when our site is first loaded up,
+the Template inside of our AppComponent is
+
+00:01:40.110 --> 00:01:42.820
+what first appears on our page.
+
+00:01:42.820 --> 00:01:50.680
+Finally, the selector value of myapp is what’s
+placed inside of our index.html file in order
+
+00:01:50.680 --> 00:01:54.140
+to initialize and load up our application.
+
+00:01:54.140 --> 00:01:58.439
+This will be discussed in further detail in
+our component section.
+
+00:01:58.439 --> 00:02:01.550
+In this section we discussed NgModule.
+
+00:02:01.550 --> 00:02:05.490
+This included the concept of importing and
+exporting modules.
+
+00:02:05.490 --> 00:02:13.780
+How we use NgModule decorator to define sitewide
+functionality using imports and declarations.
+
+00:02:13.780 --> 00:02:19.980
+And finally, we discussed how to bootstrap
+an angular application using a main.ts file
+
+00:02:19.980 --> 00:02:22.510
+and a Root Component file.
+
+00:02:22.510 --> 00:02:28.790
+In the next section, we’ll be covering Components
+in depth and how we use components to form
+
+00:02:28.790 --> 00:02:31.310
+the backbone for our Angular application.
+

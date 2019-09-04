@@ -1,0 +1,53 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.500 --> 00:00:04.560
+Hello and welcome back to Angular 2 essential
+training.
+
+00:00:04.560 --> 00:00:10.620
+In this section we’re going to be talking
+about how to use Inputs and Outputs to pass
+
+00:00:10.620 --> 00:00:17.610
+data between our parent/child components . In
+doing so, we’ll discuss some very important
+
+00:00:17.610 --> 00:00:24.740
+subjects which include: what makes up a nested
+component, how to use the Input and Output
+
+00:00:24.740 --> 00:00:26.070
+decorators.
+
+00:00:26.070 --> 00:00:32.720
+And how to create custom events and then bind
+to their output using the EventEmitter.
+
+00:00:32.720 --> 00:00:39.120
+I’ll be presenting these concepts first
+in slides and then inside of our application.
+
+00:00:39.120 --> 00:00:44.079
+Our main example is going to be a Favorite
+Component that’s going to allow us to click
+
+00:00:44.079 --> 00:00:48.039
+a heart icon in order to save a book as a
+favorite.
+
+00:00:48.039 --> 00:00:52.960
+I’ll make sure to go slow and present these
+ideas thoroughly since this section can be
+
+00:00:52.960 --> 00:00:54.530
+a bit confusing.
+
+00:00:54.530 --> 00:01:00.120
+So I encourage you to code along with me and
+then practice on your own editing and testing
+
+00:01:00.120 --> 00:01:01.539
+out these different features.
+

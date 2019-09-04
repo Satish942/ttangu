@@ -1,0 +1,176 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.560 --> 00:00:06.609
+Now that we’ve made the decision to code
+using the Typescript language, lets take a
+
+00:00:06.609 --> 00:00:13.570
+brief look at some of the core language characteristics
+as it relates to Angular 2.
+
+00:00:13.570 --> 00:00:16.699
+Typescript is a superset of Javascript.
+
+00:00:16.699 --> 00:00:22.900
+This means that we can write valid javascript
+in a typescript file and it will get compiled
+
+00:00:22.900 --> 00:00:26.279
+and work just the same as javascript.
+
+00:00:26.279 --> 00:00:32.040
+This diagram represents the all encompassing
+features that Typescript includes.
+
+00:00:32.040 --> 00:00:37.660
+So you can write typescript code using all
+the features of Ecmascript 5, which is the
+
+00:00:37.660 --> 00:00:40.150
+current version of javascript.
+
+00:00:40.150 --> 00:00:47.670
+You can also use all of the new features of
+ES2015 which include arrow functions, module
+
+00:00:47.670 --> 00:00:52.860
+loading, classes, inheritance, let and const
+variable definition.
+
+00:00:52.860 --> 00:00:57.740
+And you can also write typescript code using
+special features suggested to be included
+
+00:00:57.740 --> 00:01:05.620
+in a future version of javascript called ES7
+which includes type annotations, type checking,
+
+00:01:05.620 --> 00:01:08.329
+interfaces, generics and decorators.
+
+00:01:08.329 --> 00:01:13.929
+We’ll be covering each one of these using
+examples as we get to them while building
+
+00:01:13.929 --> 00:01:16.999
+our Angular application.
+
+00:01:16.999 --> 00:01:22.810
+The most heralded feature of Typescript is
+that of type annotations which creates what’s
+
+00:01:22.810 --> 00:01:25.399
+called Strong Typing.
+
+00:01:25.399 --> 00:01:29.380
+Strong typing involves giving everything a
+data type.
+
+00:01:29.380 --> 00:01:35.840
+So every variable, function and function parameter
+has a declared data type.
+
+00:01:35.840 --> 00:01:41.920
+We define our data type by using a colon and
+then the type we want to declare.
+
+00:01:41.920 --> 00:01:47.840
+And these types are the same basic data types
+your already familiar with such as: strings,
+
+00:01:47.840 --> 00:01:51.039
+booleans, arrays and numbers.
+
+00:01:51.039 --> 00:01:53.700
+Here are a few examples of strong typing.
+
+00:01:53.700 --> 00:02:01.049
+In the first example we declare a class property
+of pageTitle that has a type of string and
+
+00:02:01.049 --> 00:02:05.229
+is being set equal to the string Welcome.
+
+00:02:05.229 --> 00:02:09.930
+The function and function parameter examples
+show how you how we’re able to define our
+
+00:02:09.930 --> 00:02:17.930
+types by placing this colon directly after
+the declared function and function parameter.
+
+00:02:17.930 --> 00:02:24.780
+Then what we’re returning must match the
+declared data type or we get thrown an error.
+
+00:02:24.780 --> 00:02:30.610
+We can also set our function data type to
+void when not returning anything.
+
+00:02:30.610 --> 00:02:35.879
+This may seem like a hassle at first, and
+it certainly did for me, but the benefits
+
+00:02:35.879 --> 00:02:37.439
+far outweigh the costs.
+
+00:02:37.439 --> 00:02:41.520
+There’s 2 main benefits to strong typing.
+
+00:02:41.520 --> 00:02:47.409
+The first is syntax checking which happens
+before code execution.
+
+00:02:47.409 --> 00:02:54.159
+This has a big impact on helping us to find
+bugs in our code that would otherwise be very
+
+00:02:54.159 --> 00:02:56.659
+difficult to track down.
+
+00:02:56.659 --> 00:03:02.130
+The second main benefit to strong typing is
+it helps to create advanced development tools
+
+00:03:02.130 --> 00:03:06.450
+in editors like Visual Studio and Sublime
+text.
+
+00:03:06.450 --> 00:03:12.880
+Some examples include code completion suggestions,
+syntax highlighting and command line error
+
+00:03:12.880 --> 00:03:14.950
+checking.
+
+00:03:14.950 --> 00:03:19.690
+To quickly summarize the main benefits of
+typescript: Number 1: enhanced javascript
+
+00:03:19.690 --> 00:03:26.590
+language features, Number 2: better support
+for syntax checking using strong typing, Number
+
+00:03:26.590 --> 00:03:33.500
+3: additional editor tooling such as auto
+completions and code highlighting.
+
+00:03:33.500 --> 00:03:36.530
+Typescript was created by the people at Microsoft.
+
+00:03:36.530 --> 00:03:40.750
+There is a very useful website called typescriptlang.org.
+
+00:03:40.750 --> 00:03:46.829
+Here you can find a sample section that provides
+plenty of code examples as well as a playground
+
+00:03:46.829 --> 00:03:52.049
+section where you can play around writing
+code in javascript and seeing how it compiles
+
+00:03:52.049 --> 00:03:52.940
+into typescript.
+

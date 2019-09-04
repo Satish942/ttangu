@@ -1,0 +1,39 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.909 --> 00:00:02.920
+Hello and welcome back.
+
+00:00:02.920 --> 00:00:05.549
+In this section we’ll be discussing Services.
+
+00:00:05.549 --> 00:00:10.870
+We’ll start off with a definition of what
+services are and how they can be used in our
+
+00:00:10.870 --> 00:00:11.910
+application.
+
+00:00:11.910 --> 00:00:17.160
+This will include the Building of a Service,
+Registering the service as a Provider, and
+
+00:00:17.160 --> 00:00:20.220
+Injecting the service inside a component.
+
+00:00:20.220 --> 00:00:26.590
+We’ll also revisit the concept of Dependency
+Injection and how angular injects a single
+
+00:00:26.590 --> 00:00:29.939
+instance or Singleton whenever a service is
+used.
+
+00:00:29.939 --> 00:00:33.300
+We’ll also take our first look at the constructor.
+
+00:00:33.300 --> 00:00:38.550
+The constructor being a method that is used
+in a class to perform any initial setup.
+

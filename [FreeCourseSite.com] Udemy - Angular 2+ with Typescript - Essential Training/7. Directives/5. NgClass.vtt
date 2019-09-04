@@ -1,0 +1,142 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.140 --> 00:00:08.550
+The final builtin or structural directive
+we’ll discuss is the NgClass directive.
+
+00:00:08.550 --> 00:00:15.740
+The ngClass directive adds and removes CSS
+classes on an HTML element.
+
+00:00:15.740 --> 00:00:21.199
+So when something has happened in our application
+that changes our state or updates a property
+
+00:00:21.199 --> 00:00:30.329
+we’re able to add or remove styling to any
+element that ngClass is declared inside of.
+
+00:00:30.329 --> 00:00:36.530
+And this is an example of the most commonly
+used application for NgClass.
+
+00:00:36.530 --> 00:00:38.739
+We first need to wrap our directive in brackets.
+
+00:00:38.739 --> 00:00:39.829
+This is another example of binding.
+
+00:00:39.829 --> 00:00:46.039
+And this just means that we’re able to update
+our Div element depending on the result of
+
+00:00:46.039 --> 00:00:50.840
+the expression defined within these curly
+brackets.
+
+00:00:50.840 --> 00:00:57.379
+When defining our expression we first need
+to wrap it in quotes, then add curly brackets
+
+00:00:57.379 --> 00:01:00.149
+around our expression.
+
+00:01:00.149 --> 00:01:06.340
+Inside here we first define the CSS class
+we’re targeting also surrounded by quotes.
+
+00:01:06.340 --> 00:01:13.640
+And again, this is the name of a class we’ve
+defined inside our CSS stylesheet.
+
+00:01:13.640 --> 00:01:19.009
+Which is followed by a colon and then the
+name of a property or state that we want to
+
+00:01:19.009 --> 00:01:20.270
+target.
+
+00:01:20.270 --> 00:01:26.130
+Since this is an expression, we’re able
+to display different CSS classes based on
+
+00:01:26.130 --> 00:01:29.439
+different states by adding a comma.
+
+00:01:29.439 --> 00:01:36.259
+In this example we’re going to display the
+CSS class called redClass when our property
+
+00:01:36.259 --> 00:01:39.030
+showImage is set to True.
+
+00:01:39.030 --> 00:01:46.570
+And alternatively display the CSS class yellowClass
+when our showImage is set to False.
+
+00:01:46.570 --> 00:01:50.619
+In this example we’re using an Object to
+form an expression.
+
+00:01:50.619 --> 00:01:57.579
+NgClass can also be set equal to an array
+or string which excepts just the class names
+
+00:01:57.579 --> 00:02:01.520
+we want shown inside of that element.
+
+00:02:01.520 --> 00:02:08.270
+Lets now test out NgClass inside of our application.
+
+00:02:08.270 --> 00:02:12.950
+The first thing I want to do is define a couple
+of new styles.
+
+00:02:12.950 --> 00:02:19.900
+Opening up my styles.css file inside my css
+folder I’m going to add 2 new classes here
+
+00:02:19.900 --> 00:02:21.349
+at the top.
+
+00:02:21.349 --> 00:02:29.810
+The first is called redClass which is going
+to have a red background and then yellowClass
+
+00:02:29.810 --> 00:02:32.250
+which is going to have a yellow background.
+
+00:02:32.250 --> 00:02:41.980
+Now I’m going to open up my booksListComponent
+html file and then just paste in my ngClass
+
+00:02:41.980 --> 00:02:44.959
+expression right below my image.
+
+00:02:44.959 --> 00:02:48.151
+And this is the same as the example that was
+shown in our slide.
+
+00:02:48.151 --> 00:02:53.019
+So we’ll load up our app.
+
+00:02:53.019 --> 00:02:59.849
+And right away we get a big red line with
+our class and the text ngClass Test.
+
+00:02:59.849 --> 00:03:06.120
+Then if we click our Hide Image button, our
+image is hidden and our background color for
+
+00:03:06.120 --> 00:03:09.480
+our div element is changed to yellow.
+
+00:03:09.480 --> 00:03:16.510
+NgClass can be a great way to adjust our styling
+on the fly based on user inputs as well as
+
+00:03:16.510 --> 00:03:17.560
+changes in state.
+

@@ -1,0 +1,37 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.170 --> 00:00:05.500
+Hello and welcome to the section on setting
+up an Angular 2 application.
+
+00:00:05.500 --> 00:00:11.260
+In this section, we’ll discuss what our
+developer environment needs to be to get started
+
+00:00:11.260 --> 00:00:13.400
+building awesome Angular applications.
+
+00:00:13.400 --> 00:00:19.320
+We’ll look into the different types of text
+editors and plugins best suited to developing
+
+00:00:19.320 --> 00:00:20.360
+our apps.
+
+00:00:20.360 --> 00:00:25.530
+Then we’ll get going building a new app
+by following the example provided to us by
+
+00:00:25.530 --> 00:00:29.750
+the team at angular.io in the Quickstart section.
+
+00:00:29.750 --> 00:00:34.679
+This will be fairly brief in order to get
+you up and running but feel free to visit
+
+00:00:34.679 --> 00:00:40.280
+the ‘Setup Revisited’ section for a full
+explanation of the code and files.
+

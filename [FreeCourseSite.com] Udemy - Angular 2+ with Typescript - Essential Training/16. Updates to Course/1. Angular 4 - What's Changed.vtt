@@ -1,0 +1,244 @@
+WEBVTT
+
+1
+00:00:01.329 --> 00:00:06.900
+Angular version 4 was released on March 17th
+of 2017.
+
+2
+00:00:06.900 --> 00:00:12.721
+The team has already made a minor release
+for version 4.1 and is working on release
+
+3
+00:00:12.721 --> 00:00:15.530
+candidates for 4.2.
+
+4
+00:00:15.530 --> 00:00:20.210
+What does this mean to those of us that are
+new to Angular and just coming to grips with
+
+5
+00:00:20.210 --> 00:00:21.330
+Angular 2?
+
+6
+00:00:21.330 --> 00:00:26.030
+Well first, the good news is that there are
+no breaking changes.
+
+7
+00:00:26.030 --> 00:00:32.650
+So this means you can easily upgrade your
+existing Angular 2 apps to version 4 by simply
+
+8
+00:00:32.650 --> 00:00:41.830
+changing the versions in your package.json
+file and then re-installing your packages.
+
+9
+00:00:41.830 --> 00:00:44.720
+Why the jump from 2 to 4?
+
+10
+00:00:44.720 --> 00:00:50.930
+The reason for this is that the Angular Router
+had already received a major update from 2
+
+11
+00:00:50.930 --> 00:00:52.650
+to 3.
+
+12
+00:00:52.650 --> 00:00:59.280
+And to keep everything in line, the team decided
+to make the next major release as version
+
+13
+00:00:59.280 --> 00:01:00.530
+4.
+
+14
+00:01:00.530 --> 00:01:04.260
+The Team has decided on using Semantic Versioning.
+
+15
+00:01:04.260 --> 00:01:11.730
+This means there will be a major release every
+6 months and minor releases every 1-3 months.
+
+16
+00:01:11.730 --> 00:01:13.160
+So now you can expect the next major release
+of Angular which will be version 5 toward
+
+17
+00:01:13.160 --> 00:01:14.160
+the end of 2017.
+
+18
+00:01:14.160 --> 00:01:19.350
+This will enable Angular to keep evolving
+with new features being added and obsolete
+
+19
+00:01:19.350 --> 00:01:21.190
+ones removed.
+
+20
+00:01:21.190 --> 00:01:28.730
+The link to Angular Semantic Versioning explained
+will be provided in the description.
+
+21
+00:01:28.730 --> 00:01:36.750
+Moving forward how do we refer to angular,
+should we keep on calling it Angular 2, 4
+
+22
+00:01:36.750 --> 00:01:39.440
+and in the future 5?
+
+23
+00:01:39.440 --> 00:01:46.460
+The team would like us to just use the term
+Angular to refer to all current and future
+
+24
+00:01:46.460 --> 00:01:55.010
+versions, since the core framework features
+like Components, Services and Observables
+
+25
+00:01:55.010 --> 00:01:57.640
+will not be changing.
+
+26
+00:01:57.640 --> 00:02:02.990
+So now that we've discussed the fact that
+are no breaking changes between version 2
+
+27
+00:02:02.990 --> 00:02:06.710
+and 4, what changes have been made?
+
+28
+00:02:06.710 --> 00:02:13.120
+Most of the changes in Angular 4 are performance
+improvements for the framework.
+
+29
+00:02:13.120 --> 00:02:21.470
+The most significant change being the introduction
+of Flat ES6 Modules that treeshake your application.
+
+30
+00:02:21.470 --> 00:02:28.920
+This involves the compiler removing unnecessary
+code in order to reduce file size and help
+
+31
+00:02:28.920 --> 00:02:31.510
+to render the application faster.
+
+32
+00:02:31.510 --> 00:02:35.500
+The way that we use animations has changed.
+
+33
+00:02:35.500 --> 00:02:40.930
+Now we can just include BrowserAnimationsModule
+from @angular/platform-browser/animations
+
+34
+00:02:40.930 --> 00:02:49.510
+into our NgModule instead of having to import
+all the various types like trigger, style
+
+35
+00:02:49.510 --> 00:02:53.180
+and transition from angular/core.
+
+36
+00:02:53.180 --> 00:03:00.210
+When using ngIf in our templates, we now have
+the option of using an else statement.
+
+37
+00:03:00.210 --> 00:03:07.260
+We can use the element ng-template to specify
+the name of our else condition after the hash
+
+38
+00:03:07.260 --> 00:03:08.750
+symbol.
+
+39
+00:03:08.750 --> 00:03:15.950
+And then just declare whatever we want shown
+in the event our showIf is false.
+
+40
+00:03:15.950 --> 00:03:21.260
+An email validation directive has also been
+included.
+
+41
+00:03:21.260 --> 00:03:27.819
+We can now just use the keyword email inside
+of our input field and we will automatically
+
+42
+00:03:27.819 --> 00:03:32.290
+have proper email validation inside our input.
+
+43
+00:03:32.290 --> 00:03:39.470
+A great website for checking what is required
+for updating to newer versions of angular
+
+44
+00:03:39.470 --> 00:03:40.470
+is angular-update-guide.firebase.com.
+
+45
+00:03:40.470 --> 00:03:48.940
+Here 
+you can choose which version your upgrading
+
+46
+00:03:48.940 --> 00:03:55.930
+to and from while also specifying your app's
+complexity.
+
+47
+00:03:55.930 --> 00:04:03.260
+The Angular team is emphasizing backwards
+compatibility to help us make a seamless transition
+
+48
+00:04:03.260 --> 00:04:09.060
+from Angular 2 and expect more of the same
+in future versions.
+
+49
+00:04:09.060 --> 00:04:15.140
+When changes do occur they'll probably be
+more in the form of API deprecations with
+
+50
+00:04:15.140 --> 00:04:20.739
+very good error messages in our console for
+whenever we run into them.
+
+51
+00:04:20.739 --> 00:04:28.029
+So now you hopefully have a better understanding
+of what Angular 4 is all about and what the
+
+52
+00:04:28.029 --> 00:04:29.569
+future of Angular looks like.
+

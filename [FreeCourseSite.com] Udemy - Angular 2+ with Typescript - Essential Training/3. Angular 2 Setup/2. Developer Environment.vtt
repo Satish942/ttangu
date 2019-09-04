@@ -1,0 +1,129 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.439 --> 00:00:07.180
+Lets now discuss what our developer environment
+needs to be in order to develop Angular 2
+
+00:00:07.180 --> 00:00:08.180
+applications.
+
+00:00:08.180 --> 00:00:11.219
+There’s 3 main things you need to get going.
+
+00:00:11.219 --> 00:00:13.620
+First, you need Node.js installed.
+
+00:00:13.620 --> 00:00:19.621
+Second, you need a text editor like Sublime
+Text or Visual Studio and third you need to
+
+00:00:19.621 --> 00:00:20.920
+install a few plugins.
+
+00:00:20.920 --> 00:00:25.120
+I’m using Node version 6.9.1.
+
+00:00:25.120 --> 00:00:32.270
+Its recommended that you use at least version
+4 and every odd number version gets longer-term
+
+00:00:32.270 --> 00:00:33.650
+support.
+
+00:00:33.650 --> 00:00:38.010
+Node version 6 will have long term support
+until April 2018.
+
+00:00:38.010 --> 00:00:43.280
+Once you’ve downloaded the vesion right
+for your system, you’ll be able to open
+
+00:00:43.280 --> 00:00:51.110
+up a node terminal window and check your versioning
+using the node -v flag as well as npm which
+
+00:00:51.110 --> 00:00:53.489
+is used to download our dependencies.
+
+00:00:53.489 --> 00:00:56.290
+Next comes selecting an editor.
+
+00:00:56.290 --> 00:01:01.920
+Some good editor’s for angular projects
+include visual studio, sublime text, brackets
+
+00:01:01.920 --> 00:01:03.299
+and webstorm.
+
+00:01:03.299 --> 00:01:07.490
+For all of these except webstorm, you’ll
+need add in a typescript plugin.
+
+00:01:07.490 --> 00:01:11.320
+I’m using sublime text so I’ll show how
+to do this here.
+
+00:01:11.320 --> 00:01:14.830
+First we need to download package control.
+
+00:01:14.830 --> 00:01:20.970
+And once that’s installed you can type:
+Ctrl + shift + P to bring up the search bar.
+
+00:01:20.970 --> 00:01:24.780
+Then click install packages then search for
+typescript.
+
+00:01:24.780 --> 00:01:28.070
+Its already configured in my editor so its
+not coming up.
+
+00:01:28.070 --> 00:01:34.010
+But once installed, you’ll have access to
+features like error checking, auto-completion,
+
+00:01:34.010 --> 00:01:37.770
+auto suggestions and a tyepscript compiler.
+
+00:01:37.770 --> 00:01:42.860
+We want to be able to compile typescript from
+the command line and pull down typings type
+
+00:01:42.860 --> 00:01:44.270
+definitions.
+
+00:01:44.270 --> 00:01:51.940
+So inside of our terminal we’ll type ‘npm
+install typescript typings -g’.
+
+00:01:51.940 --> 00:01:56.750
+The dash g flag will download a local version
+of each of these libraries.
+
+00:01:56.750 --> 00:02:00.350
+Back in our code we now have typescript support.
+
+00:02:00.350 --> 00:02:04.440
+So when opening up our app component files
+we can test this out.
+
+00:02:04.440 --> 00:02:09.819
+When adding a comma P to our import we are
+suggested Pipe.
+
+00:02:09.819 --> 00:02:14.750
+And if we comment out this line, we’ll get
+a squiggly line error under our component
+
+00:02:14.750 --> 00:02:15.780
+decorator.
+
+00:02:15.780 --> 00:02:21.290
+These are a couple quick examples of the enhanced
+error checking and auto completion features
+
+00:02:21.290 --> 00:02:22.590
+that are already built in.
+

@@ -1,0 +1,188 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.949 --> 00:00:07.910
+In this video I’m going to explain our app
+structure and how these files work.
+
+00:00:07.910 --> 00:00:08.910
+So lets start with our index.html file.
+
+00:00:08.910 --> 00:00:10.751
+Angular applications are single page apps
+also known as SPA’s with our index file
+
+00:00:10.751 --> 00:00:11.889
+being the only true page.
+
+00:00:11.889 --> 00:00:16.690
+At the top here we define our site-wide css
+files.
+
+00:00:16.690 --> 00:00:20.640
+And then down below link to our javascript
+files.
+
+00:00:20.640 --> 00:00:27.380
+These 4 script files right here are polyfills
+needed for older browsers and the zone.js
+
+00:00:27.380 --> 00:00:32.220
+file is used within angular for change detection.
+
+00:00:32.220 --> 00:00:37.280
+Below that we have a reference for our systemjs.config
+file.
+
+00:00:37.280 --> 00:00:41.860
+This is a file that we use to load up all
+of our angular modules.
+
+00:00:41.860 --> 00:00:48.440
+We use the System.import method and pass in
+a parameter that does the work of loading
+
+00:00:48.440 --> 00:00:53.620
+all the defined modules before our app is
+started.
+
+00:00:53.620 --> 00:00:59.050
+To better understand what’s happening, lets
+open up our system config file now.
+
+00:00:59.050 --> 00:01:05.140
+First, our map object defines where to look
+for important folders.
+
+00:01:05.140 --> 00:01:10.479
+Such as the app folder which defines all of
+our frontend files.
+
+00:01:10.479 --> 00:01:16.950
+Then our packages object defines which file
+is going to be used to Bootstrap our application
+
+00:01:16.950 --> 00:01:20.569
+along with a default extension.
+
+00:01:20.569 --> 00:01:26.179
+Below that we define the angular packages
+we want to use in our application.
+
+00:01:26.179 --> 00:01:33.459
+All of these packages can be found inside
+of our angular folder within our node_modules.
+
+00:01:33.459 --> 00:01:37.869
+Our main entry point for our app is a main.ts
+file.
+
+00:01:37.869 --> 00:01:44.420
+So lets open up that file which is located
+in our app folder.
+
+00:01:44.420 --> 00:01:50.459
+In our main.ts file we’re initilizing angular
+using the Class called bootstrap, which is
+
+00:01:50.459 --> 00:01:51.689
+imported from the platform-browser-dynamic
+angular package.
+
+00:01:51.689 --> 00:01:55.729
+We’ll cover this in depth in our Bootstraping
+angular video.
+
+00:01:55.729 --> 00:02:00.689
+This main.ts file is located in our app folder.
+
+00:02:00.689 --> 00:02:04.969
+And again the app folder contains all of our
+frontend code.
+
+00:02:04.969 --> 00:02:08.539
+Including an assets folder which holds our
+images.
+
+00:02:08.539 --> 00:02:10.780
+Along with a home folder and a shared folder.
+
+00:02:10.780 --> 00:02:11.939
+And these folders will contain feature-related
+angular components that we’ll be building
+
+00:02:11.939 --> 00:02:12.939
+as we progress in the course.
+
+00:02:12.939 --> 00:02:16.850
+Lets now open up our package.json file.
+
+00:02:16.850 --> 00:02:23.650
+We use our package.json file to define which
+packages we want to download from npm and
+
+00:02:23.650 --> 00:02:26.560
+also to start our server.
+
+00:02:26.560 --> 00:02:35.260
+Under dependencies you can see a list of angular
+dependencies along with our es6 polyfills
+
+00:02:35.260 --> 00:02:38.900
+and bootstrap used for styling our app.
+
+00:02:38.900 --> 00:02:42.430
+Below that we’re declaring some dev dependencies.
+
+00:02:42.430 --> 00:02:47.659
+Here we have our typescript package along
+with typings which is needed for typescript
+
+00:02:47.659 --> 00:02:49.599
+compilation.
+
+00:02:49.599 --> 00:02:55.780
+Along with a lite-server that creates server
+so we can easily run our code inside of our
+
+00:02:55.780 --> 00:02:57.500
+browser.
+
+00:02:57.500 --> 00:03:03.500
+Back at the top we have a scripts area that
+we use to compile our typescript code into
+
+00:03:03.500 --> 00:03:09.950
+javascript, start our server, and watch for
+changes made to any of our files.
+
+00:03:09.950 --> 00:03:15.230
+Next, lets open up this tsconfig.json file.
+
+00:03:15.230 --> 00:03:19.359
+This file provides the settings for our typescript
+compiler.
+
+00:03:19.359 --> 00:03:25.959
+All the code we write in our tyepscript files
+gets turned into browser readable ES5 code.
+
+00:03:25.959 --> 00:03:31.109
+So this file defines how our javascript files
+should be created.
+
+00:03:31.109 --> 00:03:33.990
+And finally, we have a typings.json file.
+
+00:03:33.990 --> 00:03:40.099
+This file imports a typings folder which holds
+ambient type definition files used by Typescript
+
+00:03:40.099 --> 00:03:43.650
+in order to understand libraries we’re using.
+
+00:03:43.650 --> 00:03:48.760
+In this case, we’re only using one extra
+library called es6-shim.
+

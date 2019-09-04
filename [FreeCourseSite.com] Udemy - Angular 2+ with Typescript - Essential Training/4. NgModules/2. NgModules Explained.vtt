@@ -1,0 +1,125 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:05.710 --> 00:00:13.120
+The Angular docs tell us that NgModules are
+used in order to help us organize our application
+
+00:00:13.120 --> 00:00:16.510
+into cohesive blocks of functionality.
+
+00:00:16.510 --> 00:00:20.360
+So lets explore exactly what they mean by
+that.
+
+00:00:20.360 --> 00:00:25.390
+Recall that when we created our application,
+one of the first things we did was add an
+
+00:00:25.390 --> 00:00:30.029
+app.module.ts file that looks like this.
+
+00:00:30.029 --> 00:00:36.570
+Our AppModule file is going to contain all
+of the sitewide modules, components, pipes
+
+00:00:36.570 --> 00:00:40.550
+and services that we use in our application.
+
+00:00:40.550 --> 00:00:45.579
+In order to use each one of these modules,
+we first need to import them.
+
+00:00:45.579 --> 00:00:50.610
+We’ve currently imported the first 3 modules
+we’ll be using.
+
+00:00:50.610 --> 00:00:55.210
+NgModule is added so we can use it as a decorator
+below.
+
+00:00:55.210 --> 00:00:59.620
+BrowserModule is added so we can run our app
+in the browser.
+
+00:00:59.620 --> 00:01:05.280
+And AppComponent is added as the Root Component
+of our application.
+
+00:01:05.280 --> 00:01:10.710
+As we progress in this course we’ll be adding
+more components and Modules to this file such
+
+00:01:10.710 --> 00:01:14.450
+as FormsModule and RouterModule.
+
+00:01:14.450 --> 00:01:19.280
+Below that we see our first use of a Typescript
+Decorator.
+
+00:01:19.280 --> 00:01:24.590
+Decorators are functions that add extra meta
+data to the class below.
+
+00:01:24.590 --> 00:01:29.530
+They always begin with an at symbol then the
+name of the decorator.
+
+00:01:29.530 --> 00:01:35.520
+In this case our Decorator is named NgModule
+and it will provide information to the class
+
+00:01:35.520 --> 00:01:39.280
+below which is named AppModule.
+
+00:01:39.280 --> 00:01:45.040
+Notice that our Decorator starts with parenthesis
+indicating that it is a function.
+
+00:01:45.040 --> 00:01:50.680
+Then inside the parenthesis we’re also including
+curly brackets indicating that we’re passing
+
+00:01:50.680 --> 00:01:52.570
+it an object.
+
+00:01:52.570 --> 00:01:59.229
+The object we define contains key/value pairs
+just like any other commonly used objects
+
+00:01:59.229 --> 00:02:02.880
+in which we can define certain attributes.
+
+00:02:02.880 --> 00:02:09.680
+The imports key will contain all the Angular
+libraries used in our application.
+
+00:02:09.680 --> 00:02:15.410
+So far we’ve only added the BrowserModule
+but soon we’ll be adding the FormsModule
+
+00:02:15.410 --> 00:02:18.640
+and RouterModule to this list.
+
+00:02:18.640 --> 00:02:21.360
+Below that we have declarations.
+
+00:02:21.360 --> 00:02:27.870
+This will include all the components, directives
+and pipes we intend to use.
+
+00:02:27.870 --> 00:02:34.550
+And below that we have the bootstrap key which
+tells our application what our Root Component
+
+00:02:34.550 --> 00:02:39.250
+is when first initializing our application.
+
+00:02:39.250 --> 00:02:46.130
+All of this decorator meta data is then passed
+into our class called AppModule, which can
+
+00:02:46.130 --> 00:02:50.170
+then be exported and used inside other files.
+

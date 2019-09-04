@@ -1,0 +1,76 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.530 --> 00:00:05.650
+Hello, and welcome back to Angular 2 Essential
+training.
+
+00:00:05.650 --> 00:00:08.610
+In this section we’ll be discussing directives.
+
+00:00:08.610 --> 00:00:14.009
+You can think of a Directive in Angular as
+an HTML element or attribute that is used
+
+00:00:14.009 --> 00:00:17.080
+to extend and enhance our HTML.
+
+00:00:17.080 --> 00:00:21.340
+There are 3 different types of directives
+in Angular.
+
+00:00:21.340 --> 00:00:24.150
+The first is Component Directives.
+
+00:00:24.150 --> 00:00:26.480
+These are directives that have a template.
+
+00:00:26.480 --> 00:00:31.810
+So any time that we create a component and
+use its selector inside of our template, we
+
+00:00:31.810 --> 00:00:34.320
+have created a component directive.
+
+00:00:34.320 --> 00:00:39.850
+We’ve already used this type of directive
+a couple times inside of our AppComponent
+
+00:00:39.850 --> 00:00:43.050
+and BooksList Component.
+
+00:00:43.050 --> 00:00:49.829
+The second type of directive is structural
+directives, also known as Built-in directives.
+
+00:00:49.829 --> 00:00:53.110
+These are directives that come pre-shipped
+with Angular.
+
+00:00:53.110 --> 00:00:59.100
+These types of directives change the DOM layout
+by adding and removing DOM elements.
+
+00:00:59.100 --> 00:01:02.969
+In the previous lesson we used the NgIf directive.
+
+00:01:02.969 --> 00:01:09.200
+A few others we’ll look at in this section
+include NgFor as well as NgStyle.
+
+00:01:09.200 --> 00:01:13.479
+And the third type of directive is the attribute
+directive.
+
+00:01:13.479 --> 00:01:17.860
+Attribute directives change the appearance
+or behavior of an element.
+
+00:01:17.860 --> 00:01:24.649
+These are custom directives that are created
+using a directive decorator and applied inside
+
+00:01:24.649 --> 00:01:25.889
+html tags.
+

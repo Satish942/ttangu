@@ -1,0 +1,141 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.250 --> 00:00:07.270
+In this video I’m going to briefly cover
+component and attribute directives.
+
+00:00:07.270 --> 00:00:11.130
+We’ve already seen how to use Component
+directives.
+
+00:00:11.130 --> 00:00:16.770
+These are first defined within our Component
+decorators selector and then used inside of
+
+00:00:16.770 --> 00:00:17.789
+a template.
+
+00:00:17.789 --> 00:00:24.910
+An example of this is when we used our bs-app
+selector defined inside of our AppComponent.
+
+00:00:24.910 --> 00:00:30.369
+Lets now walk through how to use attribute
+or custom directives.
+
+00:00:30.369 --> 00:00:33.230
+So you probably won’t be using these all
+that often.
+
+00:00:33.230 --> 00:00:37.890
+Because most of the time you’ll be using
+the buil-tin directives to achieve the same
+
+00:00:37.890 --> 00:00:38.910
+effect.
+
+00:00:38.910 --> 00:00:43.960
+But I do want to walk you through the example
+that’s given to us in the angular docs.
+
+00:00:43.960 --> 00:00:49.170
+To start with I’m going to create a new
+shared folder inside of our app.
+
+00:00:49.170 --> 00:00:55.309
+We’ll typically want to put inside of this
+shared folder any components or directives
+
+00:00:55.309 --> 00:00:58.789
+that are used in multiple locations within
+our application.
+
+00:00:58.789 --> 00:01:06.060
+And inside here I’m going to create a new
+file which is called highlight.directive.ts
+
+00:01:06.060 --> 00:01:13.619
+So now navigating into the angular docs then
+clicking on this advanced link then attribute
+
+00:01:13.619 --> 00:01:14.760
+directives.
+
+00:01:14.760 --> 00:01:17.530
+I’ll scroll down a bit.
+
+00:01:17.530 --> 00:01:22.509
+Now I’m going to copy over the code from
+the same file highlight.directive.
+
+00:01:22.509 --> 00:01:27.880
+So this code here adds a Directive decorator
+with a selector that we can use inside of
+
+00:01:27.880 --> 00:01:29.479
+our html.
+
+00:01:29.479 --> 00:01:34.890
+Then inside our class we use ElementRef in
+order to access the DOM.
+
+00:01:34.890 --> 00:01:39.829
+As well as Renderer which allows us to change
+the DOM element’s style.
+
+00:01:39.829 --> 00:01:46.829
+So this directive is going to change the background
+color of our target element to yellow.
+
+00:01:46.829 --> 00:01:54.110
+Scrolling down a bit here we see how to use
+the directive inside our html, which is to
+
+00:01:54.110 --> 00:01:59.470
+simply add the selector name inside of the
+tag of our choice.
+
+00:01:59.470 --> 00:02:06.520
+So we’ll open up our appComponent html file
+and then add myHighlight to our h1 tag here
+
+00:02:06.520 --> 00:02:08.149
+at the top.
+
+00:02:08.149 --> 00:02:13.500
+And now the last thing we need to do is simply
+add our directive into the declarations inside
+
+00:02:13.500 --> 00:02:15.110
+of our appModule file.
+
+00:02:15.110 --> 00:02:18.920
+So we’ll open up our app.module.ts file.
+
+00:02:18.920 --> 00:02:27.319
+First, we make sure to import the class name
+from our shared folder.
+
+00:02:27.319 --> 00:02:32.450
+Then we need to add our class to our list
+of declarations.
+
+00:02:32.450 --> 00:02:37.480
+We’ll save those files.
+
+00:02:37.480 --> 00:02:42.800
+And then when we reload our application, our
+highlight directive has now changed the background
+
+00:02:42.800 --> 00:02:46.129
+color of the element that we’ve targeted.
+
+00:02:46.129 --> 00:02:51.480
+In the next video we’ll discuss the most
+used structural directives Angular provides
+
+00:02:51.480 --> 00:02:51.890
+us with.
+

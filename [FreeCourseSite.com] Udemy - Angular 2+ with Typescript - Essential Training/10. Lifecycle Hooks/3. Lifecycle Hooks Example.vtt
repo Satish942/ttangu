@@ -1,0 +1,146 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.670 --> 00:00:05.270
+Lets now add a few new lifecycle hooks to
+our application.
+
+00:00:05.270 --> 00:00:08.880
+I’ll start out by opening up our bookslist
+component file.
+
+00:00:08.880 --> 00:00:14.900
+I’m going to clean it up first by removing
+our interface reference and change our books
+
+00:00:14.900 --> 00:00:18.410
+back to an array of type any.
+
+00:00:18.410 --> 00:00:25.030
+Now in order to use our hooks, I’ll first
+add them to our import statement after Component,
+
+00:00:25.030 --> 00:00:27.810
+so we’ll add OnInit, and OnChanges.
+
+00:00:27.810 --> 00:00:32.180
+Next, we have to make sure to implement each
+one of our hooks.
+
+00:00:32.180 --> 00:00:38.449
+so BooksListComponent implements OnInit comma
+OnChanges.
+
+00:00:38.449 --> 00:00:44.249
+We’ll get a warning under our class name
+here because we need to add the corresponding
+
+00:00:44.249 --> 00:00:45.249
+methods.
+
+00:00:45.249 --> 00:00:48.899
+So I’ll just add my 2 methods above the
+properties.
+
+00:00:48.899 --> 00:00:53.100
+We’ll start with ngOnInit.
+
+00:00:53.100 --> 00:00:59.590
+Here we’ll just add a log message letting
+us know our component is initialized and also
+
+00:00:59.590 --> 00:01:04.989
+printing out a property we defined below which
+is called booksInStock.
+
+00:01:04.989 --> 00:01:06.479
+Next we have NgOnChanges.
+
+00:01:06.479 --> 00:01:12.369
+So right now there’s actually not a good
+example I can provide because this is used
+
+00:01:12.369 --> 00:01:14.340
+in two main instances.
+
+00:01:14.340 --> 00:01:18.710
+The first is when we’re communicating between
+a parent and child component.
+
+00:01:18.710 --> 00:01:24.770
+And the second is when data has been updated
+over the wire like when using websockets or
+
+00:01:24.770 --> 00:01:28.920
+an Observable which we’ll discuss in our
+services section.
+
+00:01:28.920 --> 00:01:34.240
+But I do want to give you a quick example
+illustrating this concept.
+
+00:01:34.240 --> 00:01:39.420
+So inside my ngOnChanges I’ll log out ‘new
+change detected’.
+
+00:01:39.420 --> 00:01:43.890
+Then below that I’m going to create a new
+property that has an array of 2 items called
+
+00:01:43.890 --> 00:01:45.719
+zebra and moose.
+
+00:01:45.719 --> 00:01:50.869
+Then I’m going to create a new method right
+above called changeMethod which is going to
+
+00:01:50.869 --> 00:01:57.670
+alter our original array and instead have
+2 different animals of cat and dog.
+
+00:01:57.670 --> 00:02:04.729
+Then below that I’m going to log change
+method happened along with the animals.
+
+00:02:04.729 --> 00:02:10.379
+Then to trigger this I’m going to open up
+the corresponding HTML file and then just
+
+00:02:10.379 --> 00:02:20.120
+add a new button with a click event of changeMethod
+that we just created.
+
+00:02:20.120 --> 00:02:24.680
+Lets save everything now and test this out.
+
+00:02:24.680 --> 00:02:29.909
+So first off you can see that we are getting
+our log message from our ngOnInit.
+
+00:02:29.909 --> 00:02:35.090
+And then when we go ahead and click on our
+button our array is updated and we get a log
+
+00:02:35.090 --> 00:02:36.330
+message.
+
+00:02:36.330 --> 00:02:40.959
+But we haven’t activated our NgOnChanges
+lifecycle hook.
+
+00:02:40.959 --> 00:02:47.879
+So the takeaway here is that ngOnChanges is
+only triggered when properties have been updated
+
+00:02:47.879 --> 00:02:55.630
+either between the child and parent component
+or when data has been updated via an Observable.
+
+00:02:55.630 --> 00:03:03.690
+So now lets move on to nested components in
+which we’ll see a real example of ngOnChanges
+
+00:03:03.690 --> 00:03:04.480
+being used.
+
